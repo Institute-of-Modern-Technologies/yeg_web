@@ -6,14 +6,8 @@ export default function Header() {
     <header className="bg-white py-4 px-6 flex justify-between items-center shadow-sm">
       <div className="flex items-center">
         <Link href="/" className="flex items-center">
-          <Image 
-            src="/images/logo.svg" 
-            alt="School Logo" 
-            width={50} 
-            height={50}
-            className="mr-2"
-          />
-          <span className="text-xl font-bold text-blue-900">Ed Academy</span>
+      
+          <span className="text-xl font-bold text-blue-900"><span className='text-red-500 '>Y</span> <span className='text-yellow-500'>E</span> <span className='text-cyan-500'>G</span></span>
         </Link>
       </div>
       
