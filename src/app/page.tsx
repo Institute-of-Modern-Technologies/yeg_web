@@ -3,7 +3,7 @@ import HeroSection from "../components/HeroSection";
 import { FeatureSection } from "../components/FeatureCard";
 import HighlightSection from "../components/HighlightSection";
 import WelcomeSection from "../components/WelcomeSection";
-import NewsSection from "../components/NewsSection";
+import EducationNewsSection from "../components/EducationNewsSection";
 import RegistrationSection from "../components/RegistrationSection";
 import EventsSection from "../components/EventsSection";
 import { CoursesSection } from "../components/CourseCard";
@@ -21,7 +21,7 @@ export default function Home() {
         <FeatureSection />
         <HighlightSection />
         <WelcomeSection />
-        <NewsSection />
+        <EducationNewsSection />
         <RegistrationSection />
         <EventsSection />
         <CoursesSection />

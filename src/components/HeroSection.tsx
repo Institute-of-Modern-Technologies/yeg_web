@@ -65,7 +65,7 @@ export default function HeroSection() {
   };
   
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div id="hero" className="relative w-full h-[500px] overflow-hidden">
       {/* Slides */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (

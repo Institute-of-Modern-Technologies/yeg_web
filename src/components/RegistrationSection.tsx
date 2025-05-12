@@ -36,7 +36,7 @@ export default function RegistrationSection() {
   };
   
   return (
-    <section className="py-16 px-6 bg-blue-900 text-white">
+    <section id="registration" className="py-16 px-6 bg-blue-900 text-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Online Registration</h2>
         

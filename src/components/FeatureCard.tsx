@@ -55,7 +55,7 @@ export default function FeatureCard({ icon, title, subtitle, link }: FeatureCard
 
 export function FeatureSection() {
   return (
-    <section className="bg-gradient-to-b from-[#1f2937] via-[#1a202c] to-[#111827] py-16 relative overflow-hidden animate-thunderShake">
+    <section id="features" className="bg-gradient-to-b from-[#1f2937] via-[#1a202c] to-[#111827] py-16 relative overflow-hidden animate-thunderShake">
       {/* Stormy cloud background with realistic lightning effects */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Main cloud formations */}

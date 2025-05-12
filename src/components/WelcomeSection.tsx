@@ -66,7 +66,7 @@ export default function WelcomeSection() {
   }, []);
   
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-[#1a103c] via-[#2a1e5c] to-[#352470]">
+    <section id="welcome" className="py-16 px-6 bg-gradient-to-b from-[#1a103c] via-[#2a1e5c] to-[#352470]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-white mb-4 relative inline-block">

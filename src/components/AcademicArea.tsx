@@ -21,7 +21,7 @@ function AcademicAreaItem({ icon, title, description, link }: AcademicAreaProps)
 
 export default function AcademicAreasSection() {
   return (
-    <section className="py-16 px-6 bg-blue-900">
+    <section id="academics" className="py-16 px-6 bg-blue-900">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-4 text-center">
           Why Ed Academics is best Solution for Education
