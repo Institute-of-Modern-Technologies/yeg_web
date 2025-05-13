@@ -24,7 +24,7 @@ export default function Header() {
         <Link href="#hero" className="text-blue-900 hover:text-orange-500 font-medium" onClick={(e) => scrollToSection(e, 'hero')}>Home</Link>
         <Link href="#welcome" className="text-blue-900 hover:text-orange-500 font-medium" onClick={(e) => scrollToSection(e, 'welcome')}>About</Link>
         <Link href="#features" className="text-blue-900 hover:text-orange-500 font-medium" onClick={(e) => scrollToSection(e, 'features')}>Stages</Link>
-        <Link href="#academics" className="text-blue-900 hover:text-orange-500 font-medium" onClick={(e) => scrollToSection(e, 'academics')}>Academics</Link>
+        <Link href="#academics" className="text-blue-900 hover:text-orange-500 font-medium" onClick={(e) => scrollToSection(e, 'academics')}>Programs</Link>
       </nav>
       
       <div className="flex items-center space-x-4">
