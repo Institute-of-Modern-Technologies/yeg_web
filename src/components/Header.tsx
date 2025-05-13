@@ -28,7 +28,7 @@ export default function Header() {
       </nav>
       
       <div className="flex items-center space-x-4">
-        <Link href="#registration" className="bg-orange-500 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-600 transition" onClick={(e) => scrollToSection(e, 'registration')}>
+        <Link href="#registration" className="bg-[#FF00FF] text-white px-4 py-2 rounded-md font-medium hover:bg-[#c60313] transition" onClick={(e) => scrollToSection(e, 'registration')}>
           Enroll
         </Link>
         <div className="hidden md:flex items-center space-x-3">

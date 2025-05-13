@@ -36,7 +36,7 @@ export default function RegistrationSection() {
   };
   
   return (
-    <section id="registration" className="py-16 px-6 bg-blue-900 text-white">
+    <section id="registration" className="py-16 px-6 bg-white text-[#c60313]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Online Registration</h2>
         
@@ -52,7 +52,7 @@ export default function RegistrationSection() {
                 name="studentName"
                 value={formData.studentName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-black/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FF00FF]"
                 placeholder="Enter student name"
                 required
               />
@@ -68,7 +68,7 @@ export default function RegistrationSection() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-black/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FF00FF]"
                 placeholder="Enter email address"
                 required
               />
@@ -84,7 +84,7 @@ export default function RegistrationSection() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-black/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FF00FF]"
                 placeholder="Enter phone number"
                 required
               />
@@ -100,14 +100,14 @@ export default function RegistrationSection() {
                 name="teacherName"
                 value={formData.teacherName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-black/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FF00FF]"
                 placeholder="Enter preferred teacher"
               />
             </div>
             
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-orange-500 hover:bg-orange-600 rounded-md font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-blue-900 mt-2"
+              className="w-full py-3 px-6 bg-[#FF00FF] hover:bg-[#c60313] rounded-md font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-[#FF00FF] focus:ring-offset-2 focus:ring-offset-blue-900 mt-2"
             >
               Submit
             </button>

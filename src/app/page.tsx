@@ -8,6 +8,7 @@ import RegistrationSection from "../components/RegistrationSection";
 import EventsSection from "../components/EventsSection";
 import { CoursesSection } from "../components/CourseCard";
 import AcademicAreasSection from "../components/AcademicArea";
+import PartnersSection from "../components/PartnersSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import AdmissionsSection from "../components/AdmissionsSection";
 import Footer from "../components/Footer";
@@ -26,6 +27,7 @@ export default function Home() {
         <EventsSection />
         <CoursesSection />
         <AcademicAreasSection />
+        <PartnersSection />
         <TestimonialsSection />
         <AdmissionsSection />
       </main>

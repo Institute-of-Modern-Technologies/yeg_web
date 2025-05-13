@@ -28,14 +28,14 @@ export default function CtaSection() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               href="/admissions"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3 rounded-md transition"
+              className="bg-[#FF00FF] hover:bg-[#c60313] text-white font-medium px-8 py-3 rounded-md transition"
             >
               Apply Now
             </Link>
             
             <Link 
               href="/contact"
-              className="bg-transparent hover:bg-white/10 text-white border border-white font-medium px-8 py-3 rounded-md transition"
+              className="bg-transparent hover:bg-white/10 text-white border border-[#FF00FF] font-medium px-8 py-3 rounded-md transition"
             >
               Schedule a Visit
             </Link>

@@ -12,42 +12,19 @@ export default function FeatureCard({ icon, title, subtitle, link }: FeatureCard
   return (
     <Link 
       href={link}
-      className="group flex flex-col items-center justify-center text-center p-5 bg-gradient-to-b from-[#2d3748]/70 to-[#1e2a3b]/80 backdrop-blur-sm border border-white/10 rounded-xl transition-all duration-500 hover:border-blue-400/60 hover:scale-105 h-44 w-44 mx-auto shadow-lg relative overflow-hidden hover:animate-thunderShake"
+      className="group flex flex-col items-center justify-center text-center p-5 bg-white border-2 border-[#FF00FF]/20 rounded-xl transition-all duration-500 hover:border-[#FF00FF]/80 hover:scale-105 h-44 w-44 mx-auto shadow-[0_15px_30px_-10px_rgba(0,0,0,0.2)] relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#3b4a64]/80 via-[#2d3748]/90 to-[#1e293b]/90 opacity-100 group-hover:opacity-90 transition-opacity duration-500"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-white opacity-100 group-hover:opacity-95 transition-opacity duration-500"></div>
       
-      {/* Lightning effect on hover */}
-      <div className="absolute inset-0 bg-blue-200/20 opacity-0 group-hover:animate-realLightning"></div>
-      
-      {/* Zigzag lightning */}
-      <div className="absolute top-0 left-2/3 w-1 h-full opacity-0 group-hover:animate-realLightning">
-        <svg viewBox="0 0 10 100" className="w-full h-full">
-          <path d="M5,0 L3,20 L7,25 L2,50 L6,55 L1,100" stroke="white" strokeWidth="1" fill="none" />
-        </svg>
-      </div>
-      
-      {/* Rain droplets */}
-      <div className="rain-container absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <div 
-            key={i} 
-            className="absolute bg-blue-200/30 w-[1px] h-[8px] animate-rainDrop" 
-            style={{ 
-              left: `${Math.random() * 100}%`, 
-              top: `-${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 1.5}s`,
-              animationDuration: `${0.5 + Math.random() * 0.5}s`
-            }}
-          />
-        ))}
-      </div>
+      {/* Soft glow effect on hover */}
+      <div className="absolute inset-0 bg-[#FF00FF]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-        <div className="text-blue-300 mb-3 transform transition-transform duration-500 group-hover:scale-110 group-hover:text-white flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 8px rgba(147, 197, 253, 0.5))' }}>
+        <div className="text-[#FF00FF] mb-3 transform transition-transform duration-500 group-hover:scale-110 flex items-center justify-center" style={{ filter: 'drop-shadow(0 0 5px rgba(255, 0, 255, 0.3))' }}>
           {icon}
         </div>
-        <h3 className="text-white text-base font-bold mb-2">{title}</h3>
-        <p className="text-gray-300 text-sm leading-tight">{subtitle}</p>
+        <h3 className="text-[#FF00FF] text-base font-bold mb-2">{title}</h3>
+        <p className="text-gray-700 text-sm leading-tight">{subtitle}</p>
       </div>
     </Link>
   );
@@ -55,25 +32,14 @@ export default function FeatureCard({ icon, title, subtitle, link }: FeatureCard
 
 export function FeatureSection() {
   return (
-    <section id="features" className="bg-gradient-to-b from-[#1f2937] via-[#1a202c] to-[#111827] py-16 relative overflow-hidden animate-thunderShake">
-      {/* Stormy cloud background with realistic lightning effects */}
+    <section id="features" className="bg-white py-16 relative overflow-hidden shadow-[0_0_50px_15px_rgba(0,0,0,0.1)] border-y-2 border-[#FF00FF]/20 z-10">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-white pointer-events-none"></div>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        {/* Main cloud formations */}
-        <div className="absolute -top-20 left-20 w-80 h-40 bg-[#2d3748] rounded-full filter blur-3xl opacity-40 animate-cloudMove"></div>
-        <div className="absolute -top-40 right-40 w-96 h-60 bg-[#1e293b] rounded-full filter blur-3xl opacity-50 animate-cloudMove"></div>
-        <div className="absolute top-1/3 left-1/4 w-60 h-60 bg-[#4a5568]/40 rounded-full filter blur-3xl opacity-30 animate-cloudMove"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-72 h-40 bg-[#2d3748]/30 rounded-full filter blur-3xl opacity-40 animate-cloudMove"></div>
-
-        {/* Lightning flash overlay */}
-        <div className="absolute inset-0 bg-blue-200/30 animate-realLightning"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-blue-500/5 to-blue-700/10 animate-thunderGlow"></div>
-        
-        {/* Lightning bolts - zigzag paths */}
-        <div className="absolute top-0 left-1/4 w-2 h-full opacity-0 animate-realLightning">
-          <svg viewBox="0 0 20 200" className="w-full h-full">
-            <path d="M10,0 L8,40 L15,45 L5,100 L12,105 L2,200" stroke="white" strokeWidth="1.5" fill="none" />
-          </svg>
-        </div>
+        {/* Subtle decorative elements */}
+        <div className="absolute -top-20 left-20 w-80 h-40 bg-[#FF00FF]/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute -top-40 right-40 w-96 h-60 bg-[#FF00FF]/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/4 w-60 h-60 bg-[#00FFFF]/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-72 h-40 bg-[#FFFF00]/5 rounded-full filter blur-3xl"></div>
         <div className="absolute top-0 right-1/3 w-2 h-full opacity-0 animate-realLightning delay-300">
           <svg viewBox="0 0 20 200" className="w-full h-full">
             <path d="M10,0 L14,50 L5,55 L16,120 L8,125 L18,200" stroke="white" strokeWidth="1.5" fill="none" />
@@ -97,13 +63,14 @@ export function FeatureSection() {
         </div>
       </div>
       
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="inline-block text-4xl font-bold text-white mb-3 relative">
-            Our <span className="text-orange-400">Stages</span>
-            <div className="absolute h-1 w-full bg-gradient-to-r from-orange-500/0 via-orange-500 to-orange-500/0 bottom-0 left-0"></div>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-[#FF00FF] text-4xl font-bold mb-6 relative inline-block">
+            <span className="relative z-10">Our Stages</span>
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#FF00FF]/80 rounded-full"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#FF00FF] rounded-full opacity-50"></span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">Follow our proven pathway to success through these key stages</p>
+          <p className="text-gray-700 max-w-lg mx-auto">Follow our proven pathway to success through these key stages</p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
@@ -151,52 +118,27 @@ export function FeatureSection() {
 
         </div>
         
-        <div className="text-center max-w-3xl mx-auto mt-12 mb-4 px-6 py-8 bg-gradient-to-br from-[#2d3748]/90 to-[#1e293b]/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 relative overflow-hidden group hover:border-blue-500/20 transition-all duration-500 group-hover:animate-thunderShake">
-          {/* Stormy background effects */}
-          <div className="absolute -top-20 -right-20 w-60 h-40 bg-[#4a5568]/30 rounded-full filter blur-3xl opacity-40 group-hover:opacity-60 transition-all duration-700"></div>
-          <div className="absolute -bottom-20 -left-20 w-60 h-40 bg-[#4a5568]/30 rounded-full filter blur-3xl opacity-40 group-hover:opacity-60 transition-all duration-700"></div>
-          
-          {/* Lightning flash effects */}
-          <div className="absolute inset-0 bg-blue-200/30 opacity-0 group-hover:animate-realLightning"></div>
-          
-          {/* Lightning bolt zigzag */}
-          <div className="absolute top-0 left-1/3 w-2 h-full opacity-0 group-hover:animate-realLightning">
-            <svg viewBox="0 0 20 200" className="w-full h-full">
-              <path d="M10,0 L8,40 L15,45 L5,100 L12,105 L2,200" stroke="white" strokeWidth="1.5" fill="none" />
-            </svg>
-          </div>
-          
-          {/* Rain animation */}
-          <div className="rain-container absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <div 
-                key={i} 
-                className="absolute bg-blue-200/30 w-[1px] h-[10px] animate-rainDrop" 
-                style={{ 
-                  left: `${Math.random() * 100}%`, 
-                  top: `-${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 2}s`,
-                  animationDuration: `${0.8 + Math.random() * 0.6}s`
-                }}
-              />
-            ))}
-          </div>
+        <div className="text-center max-w-3xl mx-auto mt-12 mb-4 px-6 py-8 bg-white rounded-2xl shadow-[0_20px_50px_-15px_rgba(0,0,0,0.25)] border-2 border-[#FF00FF]/30 relative overflow-hidden group hover:border-[#FF00FF]/60 transition-all duration-500 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
+          {/* Subtle background effects */}
+          <div className="absolute -top-20 -right-20 w-60 h-40 bg-black/5 rounded-full filter blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-60 h-40 bg-black/5 rounded-full filter blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-40 bg-black/3 rounded-full filter blur-3xl opacity-30"></div>
           
           <div className="relative z-10">
             <div className="mb-5">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300 font-bold text-2xl sm:text-3xl tracking-wide">YOU ARE WELCOME TO </span>
+              <span className="text-[#FF00FF] font-bold text-2xl sm:text-3xl tracking-wide">YOU ARE WELCOME TO </span>
               <span className="text-4xl sm:text-5xl font-extrabold inline-flex items-center justify-center ml-1 relative">
-                <span className="text-red-400 drop-shadow-lg relative z-20 transform transition-transform duration-500 hover:scale-110">Y</span>
-                <span className="text-yellow-400 drop-shadow-lg relative z-20 transform transition-transform duration-500 hover:scale-110">E</span>
-                <span className="text-cyan-400 drop-shadow-lg relative z-20 transform transition-transform duration-500 hover:scale-110">G</span>
-                <span className="absolute inset-0 bg-white/5 blur-xl rounded-full -z-10"></span>
+                <span className="text-[#c60313] drop-shadow-lg relative z-20 transform transition-transform duration-500 hover:scale-110">Y</span>
+                <span className="text-[#FFFF00] drop-shadow-lg relative z-20 transform transition-transform duration-500 hover:scale-110">E</span>
+                <span className="text-[#00FFFF] drop-shadow-lg relative z-20 transform transition-transform duration-500 hover:scale-110">G</span>
+                <span className="absolute inset-0 bg-[#FF00FF]/5 blur-xl rounded-full -z-10"></span>
               </span>
             </div>
-            <h1 className="text-white font-bold text-2xl sm:text-3xl leading-tight mt-4 max-w-2xl mx-auto">
+            <h1 className="text-black font-bold text-2xl sm:text-3xl leading-tight mt-4 max-w-2xl mx-auto">
               Equipping young minds with skills in
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300 hover:from-orange-300 hover:to-orange-200 transition-all duration-300"> Technology</span>,
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-300 hover:from-yellow-300 hover:to-yellow-200 transition-all duration-300"> Entrepreneurship</span>, and
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-300 hover:from-cyan-300 hover:to-cyan-200 transition-all duration-300"> Creativity</span>.
+              <span className="text-[#c60313] transition-all duration-300"> Technology</span>,
+              <span className="text-[#FFFF00] transition-all duration-300"> Entrepreneurship</span>, and
+              <span className="text-[#FF00FF] transition-all duration-300"> Creativity</span>.
             </h1>
           </div>
         </div>

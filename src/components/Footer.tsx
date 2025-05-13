@@ -19,7 +19,7 @@ export default function Footer() {
   };
   
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-[#950713] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
@@ -123,7 +123,7 @@ export default function Footer() {
               
               <button
                 type="submit"
-                className="w-full py-2 px-4 bg-orange-500 hover:bg-orange-600 rounded-md font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                className="w-full py-2 px-4 bg-[#FF00FF] hover:bg-orange-600 rounded-md font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
               >
                 Send Message
               </button>
@@ -131,7 +131,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-blue-800 text-center text-sm text-blue-200">
+        <div className="mt-12 pt-8 border-t border-white text-center text-sm text-blue-200">
           <p>&copy; {new Date().getFullYear()} Ed Academy | Designed by Awesome Admin.</p>
           <p className="mt-2">
             <Link href="/privacy" className="hover:text-orange-300 transition">Privacy Policy</Link> | 

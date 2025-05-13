@@ -37,6 +37,10 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(5%)' },
           '100%': { transform: 'translateX(0)' }
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }
         }
       },
       animation: {
@@ -44,7 +48,8 @@ module.exports = {
         'thunderGlow': 'thunderGlow 10s infinite',
         'thunderShake': 'thunderShake 10s infinite',
         'rainDrop': 'rainDrop 1s linear infinite',
-        'cloudMove': 'cloudMove 20s infinite ease-in-out'
+        'cloudMove': 'cloudMove 20s infinite ease-in-out',
+        'marquee': 'marquee 25s linear infinite'
       },
     },
   },

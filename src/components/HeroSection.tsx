@@ -92,7 +92,7 @@ export default function HeroSection() {
               <div className="max-w-2xl">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{slide.title}</h1>
                 <p className="text-white text-lg md:text-xl mb-8">{slide.subtitle}</p>
-                <Link href={slide.buttonLink} className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-md transition duration-300">
+                <Link href={slide.buttonLink} className="bg-[#FF00FF] hover:bg-[#c60313] text-white font-medium px-6 py-3 rounded-md transition duration-300">
                   {slide.buttonText}
                 </Link>
               </div>
@@ -108,7 +108,7 @@ export default function HeroSection() {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-orange-500 w-6' : 'bg-white/60'
+              index === currentSlide ? 'bg-[#FF00FF] w-6' : 'bg-white/60'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

@@ -39,9 +39,9 @@ const FeatureCardsSection: React.FC = () => (
                 e.currentTarget.click();
               }
             }}
-            className="bg-[#231a3a] rounded-xl p-6 flex flex-col items-center shadow-lg hover:bg-[#2d204d] transition-colors outline-none focus:ring-2 focus:ring-orange-400 cursor-pointer"
+            className="bg-[#231a3a] rounded-xl p-6 flex flex-col items-center shadow-lg hover:bg-[#2d204d] transition-colors outline-none focus:ring-2 focus:ring-[#FF00FF] cursor-pointer"
           >
-            <Icon className="h-10 w-10 text-orange-400 mb-4" aria-hidden="true" />
+            <Icon className="h-10 w-10 text-[#FF00FF] mb-4" aria-hidden="true" />
             <h3 className="text-white text-lg font-bold mb-2 text-center">{title}</h3>
             <p className="text-gray-300 text-sm text-center">{description}</p>
           </div>

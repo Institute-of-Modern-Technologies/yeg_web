@@ -94,7 +94,7 @@ export default function EducationNewsSection() {
     };
   }, []);
   return (
-    <section className="bg-[#1e1033] py-16 relative">
+    <section className="bg-[#66050D] py-16 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left column - News items */}

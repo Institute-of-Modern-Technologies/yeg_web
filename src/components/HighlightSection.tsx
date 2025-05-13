@@ -13,7 +13,7 @@ export default function HighlightSection() {
           </p>
           <Link 
             href="/benefits" 
-            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-md transition"
+            className="inline-block bg-[#FF00FF] hover:bg-[#c60313] text-white font-medium px-6 py-3 rounded-md transition"
           >
             Read More
           </Link>
