@@ -100,11 +100,15 @@ export default function EducationNewsSection() {
           {/* Left column - News items */}
           <div className="lg:col-span-8">
             <div className="text-orange-500 uppercase text-sm font-bold tracking-wider mb-3">
-            HAPPENINGS AT <span className='text-red-500'>Young</span> <span className='text-yellow-500'>Experts</span> 
+            HAPPENINGS AT <span className='text-[#FF00FF]'>Young</span> <span className='text-yellow-500'>Experts</span> 
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-10">
-            This Week at<span className='text-red-500'>Young</span> <span className='text-yellow-500'>Experts</span> : 
-            where your ideas come to shine!
+            <h2 className="text-4xl lg:text-3xl font-bold text-white ">
+            This Week at<span className='text-[#FF00FF]'>Young</span> <span className='text-yellow-500'>Experts</span> <span className='text-cyan-500'>GROUP</span>: 
+          
+            </h2>
+
+            <h2 className="text-xl lg:text-3xl font-bold text-white mb-10 ">
+            where your ideas come to life!
             </h2>
 
             {/* News Item 1 */}
@@ -174,17 +178,17 @@ export default function EducationNewsSection() {
               <div className="md:w-2/3">
                 <div className="flex items-center mb-2 text-sm">
                   <div className="text-orange-400 mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="#FFFF00">
                       <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-400 mr-4">DADDY'S PRIDE</span>
-                  <div className="text-orange-400 mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="currentColor">
+                  <span className="text-white mr-4 font-bold">DADDY'S PRIDE</span>
+                  <div className="text-orange mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="#FFFF00">
                       <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-400">May 11, 2025</span>
+                  <span className="text-white mr-4 font-bold">May 11, 2025</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   <Link href="#" className="hover:text-orange-400 transition-colors">
@@ -216,17 +220,17 @@ export default function EducationNewsSection() {
               <div className="md:w-2/3">
                 <div className="flex items-center mb-2 text-sm">
                   <div className="text-orange-400 mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="#FFFF00">
                       <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-400 mr-4">JULIAN AYIVI</span>
+                  <span className="text-white mr-4 font-bold">JULIAN AYIVI</span>
                   <div className="text-orange-400 mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="#FFFF00">
                       <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-400">JANUARY 24, 2020</span>
+                  <span className="text-white mr-4 font-bold">JANUARY 24, 2020</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   <Link href="#" className="hover:text-orange-400 transition-colors">
@@ -254,17 +258,17 @@ export default function EducationNewsSection() {
               <div className="md:w-2/3">
                 <div className="flex items-center mb-2 text-sm">
                   <div className="text-orange-400 mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="#FFFF00">
                       <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-400 mr-4">Neriah Elikem Winner</span>
+                  <span className="text-white mr-4 font-bold">Neriah Elikem Winner</span>
                   <div className="text-orange-400 mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="#FFFF00">
                       <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-400">JANUARY 24, 2020</span>
+                  <span className="text-white font-bold">JANUARY 24, 2020</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   <Link href="#" className="hover:text-orange-400 transition-colors">
@@ -297,7 +301,7 @@ export default function EducationNewsSection() {
                     <div className="mt-8">
                   <a 
                     href="#" 
-                    className="block w-full text-center bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-md transition-colors duration-300 font-medium"
+                    className="block w-full text-center bg-cyan-500 hover:bg-cyan-600 text-black py-3 px-6 rounded-md transition-colors duration-300 font-medium"
                   >
                     <span className="flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
@@ -322,7 +326,7 @@ export default function EducationNewsSection() {
                   <div className="mt-8">
                   <a 
                     href="#" 
-                    className="block w-full text-center bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-md transition-colors duration-300 font-medium"
+                    className="block w-full text-center bg-cyan-500 hover:bg-cyan-600 text-black py-3 px-6 rounded-md transition-colors duration-300 font-medium"
                   >
                     <span className="flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
@@ -344,7 +348,7 @@ export default function EducationNewsSection() {
                 <div className="mt-8">
                   <a 
                     href="#" 
-                    className="block w-full text-center bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-md transition-colors duration-300 font-medium"
+                    className="block w-full text-center bg-cyan-500 hover:bg-cyan-600 text-black py-3 px-6 rounded-md transition-colors duration-300 font-medium"
                   >
                     <span className="flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">

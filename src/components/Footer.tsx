@@ -19,7 +19,7 @@ export default function Footer() {
   };
   
   return (
-    <footer className="bg-[#950713] text-white">
+    <footer className="bg-[#c60313] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
@@ -35,8 +35,8 @@ export default function Footer() {
                 </svg>
                 <div>
                   <p className="font-medium">Email:</p>
-                  <a href="mailto:info@edacademy.com" className="text-blue-100 hover:text-orange-300 transition">
-                    info@edacademy.com
+                  <a href="mailto:yeg@imtghana.com" className="text-blue-100 hover:text-orange-300 transition">
+                    yeg@imtghana.com
                   </a>
                 </div>
               </li>
@@ -47,8 +47,8 @@ export default function Footer() {
                 </svg>
                 <div>
                   <p className="font-medium">Phone:</p>
-                  <a href="tel:+11234567890" className="text-blue-100 hover:text-orange-300 transition">
-                    +1 123 456 7890
+                  <a href="tel:+2330547147313" className="text-blue-100 hover:text-orange-300 transition">
+                    +233 0547147313
                   </a>
                 </div>
               </li>
@@ -61,9 +61,9 @@ export default function Footer() {
                 <div>
                   <p className="font-medium">Address:</p>
                   <p className="text-blue-100">
-                    123 Education Lane<br />
-                    Learning City, ED 54321<br />
-                    United States
+                  No. 8 Borstal Street,<br />
+                  Roman Ridge Accra.<br />
+                  Postal Adress: P.O.Box 4754 Accra
                   </p>
                 </div>
               </li>
@@ -132,9 +132,9 @@ export default function Footer() {
         </div>
         
         <div className="mt-12 pt-8 border-t border-white text-center text-sm text-blue-200">
-          <p>&copy; {new Date().getFullYear()} Ed Academy | Designed by Awesome Admin.</p>
+          <p>&copy; {new Date().getFullYear()} Young Expert Group | Designed by Institute Of Modern Technologies.</p>
           <p className="mt-2">
-            <Link href="/privacy" className="hover:text-orange-300 transition">Privacy Policy</Link> | 
+       Privacy Policy | 
             <Link href="/terms" className="hover:text-orange-300 transition ml-2">Terms of Service</Link>
           </p>
         </div>

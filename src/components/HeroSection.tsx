@@ -7,37 +7,75 @@ import Link from 'next/link';
 interface SlideProps {
   id: number;
   image: string;
-  title: string;
-  subtitle: string;
+  title: string | React.ReactNode;
+  subtitle: React.ReactNode;
   buttonText: string;
   buttonLink: string;
+  layout?: 'left' | 'center' | 'right';
+  titleColor?: string;
+  subtitleColor?: string;
+  buttonColor?: string;
+  buttonHoverColor?: string;
+  contentStyle?: string;
 }
 
 const slides: SlideProps[] = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format',
-    title: 'Young Experts is a Hands-on Training Program',
-    subtitle: 'Designed to equip student with Technology, Etrepreneurship and creativity skills',
-    buttonText: 'Buy Now',
+    image: '/images/Hero picture 2.png',
+    title: '',
+    subtitle: null,
+    buttonText: 'Enroll Now',
     buttonLink: '/enroll',
+    layout: 'left',
+    titleColor: 'text-white',
+    subtitleColor: 'text-white',
+    buttonColor: 'bg-[#FF00FF]',
+    buttonHoverColor: 'hover:bg-[#FF00FF]/80',
+    contentStyle: '  ml-44'
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format',
-    title: 'Discover Your Child\'s Potential',
-    subtitle: 'Innovative learning approaches for the modern student',
-    buttonText: 'Learn More',
-    buttonLink: '/about',
+    image: '/images/Hero picture 3.png',
+    title: 
+      <div>
+        <div className="text-white text-xl ml-40">Young Experts Group</div>
+        <div className="mt-2 ml-10">
+          <span className="text-white font-bold text-5xl">Get </span>
+          <span className="text-[#FFFF00] font-bold text-5xl">CAREER- READY</span>
+        </div>
+        <div className="mt-3 ml-16">
+          <span className="text-[#FFFF00] font-bold text-3xl">Before</span>
+          <span className="text-white font-bold text-3xl">&nbsp;COMPLETING SCHOOL</span>
+        </div>
+        <div className="text-white text-lg mt-3 ml-5">
+          Empowering Young Minds Through Tech and Entrepreneurship
+        </div>
+      </div>,
+    subtitle: null,
+    buttonText: 'Sign Up here',
+    buttonLink: '/enroll',
+    layout: 'left',
+    titleColor: '',
+    subtitleColor: '',
+    buttonColor: 'bg-[#FF00FF] text-white',
+    buttonHoverColor: 'hover:bg-[#FF00FF]/90',
+    contentStyle: 'py-6 ml-4'
   },
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format',
-    title: 'Creating Tomorrow\'s Leaders Today',
-    subtitle: 'Quality education focused on creativity and innovation',
-    buttonText: 'Explore',
-    buttonLink: '/programs',
-  },
+    title: 'Join Our Community',
+    subtitle: 'Connect with like-minded students and mentors',
+    buttonText: 'Join Now',
+    buttonLink: '/community',
+    layout: 'right',
+    titleColor: 'text-white',
+    subtitleColor: 'text-[#FFFF00]',
+    buttonColor: 'bg-[#FFFF00]',
+    buttonHoverColor: 'hover:bg-[#FFFF00]/80',
+    contentStyle: 'border-r-4 border-[#FFFF00] pr-6 bg-black/40 p-6 rounded-l-lg text-right'
+  }
 ];
 
 export default function HeroSection() {
@@ -76,11 +114,10 @@ export default function HeroSection() {
             }`}
           >
             {/* Background Image */}
-            <div className="absolute inset-0 bg-black/40 z-10" />
             <div className="relative h-full w-full">
               <Image
                 src={slide.image}
-                alt={slide.title}
+                alt={typeof slide.title === 'string' ? slide.title : `Slide ${slide.id}`}
                 fill
                 className="object-cover"
                 priority={index === 0}
@@ -88,13 +125,34 @@ export default function HeroSection() {
             </div>
             
             {/* Content */}
-            <div className="absolute inset-0 z-20 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24">
-              <div className="max-w-2xl">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{slide.title}</h1>
-                <p className="text-white text-lg md:text-xl mb-8">{slide.subtitle}</p>
-                <Link href={slide.buttonLink} className="bg-[#FF00FF] hover:bg-[#c60313] text-white font-medium px-6 py-3 rounded-md transition duration-300">
-                  {slide.buttonText}
-                </Link>
+            <div className={`absolute inset-0 z-20 flex flex-col ${slide.id === 1 ? 'justify-end pb-12' : 'justify-center'} items-${slide.layout === 'center' ? 'center' : slide.layout === 'right' ? 'end' : 'start'} ${slide.layout === 'left' ? 'pl-6 md:pl-12 lg:pl-16' : 'px-6 md:px-16 lg:px-24'}`}>
+              <div className={slide.contentStyle || 'max-w-2xl'}>
+                {slide.layout === 'left' && slide.id === 2 ? (
+                  <>{slide.title}{slide.subtitle && <p className={`mt-4 ${slide.subtitleColor || 'text-white'}`}>{slide.subtitle}</p>}</>
+                ) : (
+                  <>
+                    <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${slide.titleColor || 'text-white'}`}>{slide.title}</h1>
+                    <p className={`text-lg md:text-xl mb-8 ${slide.subtitleColor || 'text-white'}`}>{slide.subtitle}</p>
+                  </>
+                )}
+              
+                {slide.buttonText && slide.buttonLink && slide.id === 2 ? (
+                  <div className="mt-6 ml-48">
+                    <Link 
+                      href={slide.buttonLink} 
+                      className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
+                    >
+                      Sign Up here
+                    </Link>
+                  </div>
+                ) : slide.buttonText && slide.buttonLink && (
+                  <Link 
+                    href={slide.buttonLink} 
+                    className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-6 py-3 rounded-md transition duration-300`}
+                  >
+                    {slide.buttonText}
+                  </Link>
+                )}
               </div>
             </div>
           </div>

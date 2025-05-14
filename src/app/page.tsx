@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <FeatureSection />
-        <HighlightSection />
+        {/* <HighlightSection /> */}
         <WelcomeSection />
         <EducationNewsSection />
         <RegistrationSection />
@@ -29,7 +29,7 @@ export default function Home() {
         <AcademicAreasSection />
         <PartnersSection />
         <TestimonialsSection />
-        <AdmissionsSection />
+        {/* <AdmissionsSection /> */}
       </main>
       <Footer />
     </div>

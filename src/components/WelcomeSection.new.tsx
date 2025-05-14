@@ -66,21 +66,38 @@ export default function WelcomeSection() {
   }, []);
   
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 px-6 bg-gradient-to-b from-[#2a1e5c] to-[#1f1846] relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#FF00FF]/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/3 -left-40 w-80 h-80 bg-[#FFFF00]/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00FFFF]/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-[#FF00FF]/5 rounded-full filter blur-3xl"></div>
+        
+        {/* Animated subtle light streaks */}
+        <div className="absolute top-0 right-1/4 w-0.5 h-full bg-gradient-to-b from-transparent via-white/10 to-transparent opacity-30 animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/3 w-0.5 h-1/2 bg-gradient-to-b from-transparent via-white/10 to-transparent opacity-20 animate-pulse delay-700"></div>
+        <div className="absolute top-0 left-2/3 w-0.5 h-full bg-gradient-to-b from-transparent via-white/10 to-transparent opacity-30 animate-pulse delay-1000"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-[#43256E] mb-4 relative inline-block">
+          <h2 className="text-5xl font-bold text-white mb-4 relative inline-block">
             Welcome
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-orange-400 rounded-full opacity-70"></span>
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-[#FF00FF] rounded-full opacity-80"></span>
+            <span className="absolute bottom-0 left-0 w-1/2 h-1 bg-[#00FFFF] rounded-full opacity-60 animate-expandWidth"></span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">Experience excellence in education with YEG</p>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">Experience excellence in education with <span className="text-[#FF00FF] font-bold">Y</span><span className="text-[#FFFF00] font-bold">E</span><span className="text-[#00FFFF] font-bold">G</span></p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column */}
-          <div className="lg:col-span-4 bg-white p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-fit">
-            <h3 className="text-3xl font-bold text-[#43256E] mb-4 flex items-center">
-              <span className="w-8 h-8 rounded-full bg-orange-500 mr-3 flex items-center justify-center text-white">
+          <div className="lg:col-span-4 bg-[#2d204d] p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border border-[#FF00FF]/30 transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 hover:border-[#FF00FF]/60 h-fit relative overflow-hidden group">
+            {/* Subtle background decoration */}
+            <div className="absolute -top-40 -right-40 w-60 h-60 bg-[#FF00FF]/10 rounded-full filter blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-[#FFFF00]/5 to-[#00FFFF]/5 rounded-full filter blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
+            <h3 className="text-3xl font-bold text-white mb-4 flex items-center relative z-10">
+              <span className="w-10 h-10 rounded-full bg-[#FF00FF] mr-3 flex items-center justify-center text-white shadow-[0_0_15px_rgba(255,0,255,0.5)]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                 </svg>
@@ -88,17 +105,17 @@ export default function WelcomeSection() {
               Our Program
             </h3>
 
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              The <span className="font-semibold text-[#43256E]">Young Experts Group (YEG)</span> is a hands-on training program designed to equip students (ages 6-16) with Technology, Entrepreneurship, and Creativity skills.
+            <p className="text-gray-200 mb-6 leading-relaxed relative z-10">
+              The <span className="font-semibold text-[#FFFF00]">Young Experts Group (YEG)</span> is a hands-on training program designed to equip students (ages 6-16) with <span className="text-[#00FFFF]">Technology</span>, <span className="text-[#FFFF00]">Entrepreneurship</span>, and <span className="text-[#FF00FF]">Creativity</span> skills.
             </p>
             
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed relative z-10">
               We collaborate with schools to provide structured, engaging, and practical learning experiences that prepare students for a tech-driven future.
             </p>
 
             <Link
               href="/about"
-              className="group inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
+              className="group inline-flex items-center bg-gradient-to-r from-[#FF00FF] to-[#c60313] text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#FF00FF]/40 relative overflow-hidden"
             >
               <span className="mr-2">Find Out More</span>
               <span className="transform transition-transform duration-300 group-hover:translate-x-1">
