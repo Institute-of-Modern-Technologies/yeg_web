@@ -12,7 +12,7 @@ export default function HighlightSection() {
             At Ed Academy, we believe every child deserves the best educational experience. Our programs are designed to nurture curiosity, build confidence, and develop critical thinking skills in a safe and supportive environment. Our small class sizes ensure personalized attention for each student.
           </p>
           <Link 
-            href="/benefits" 
+            href="javascript:void(0)" onClick={(e) => e.preventDefault()} 
             className="inline-block bg-[#FF00FF] hover:bg-[#c60313] text-white font-medium px-6 py-3 rounded-md transition"
           >
             Read More

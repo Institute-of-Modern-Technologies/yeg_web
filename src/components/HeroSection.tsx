@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import SectionTransition from './SectionTransition';
 
 interface SlideProps {
   id: number;
@@ -139,7 +140,8 @@ export default function HeroSection() {
                 {slide.buttonText && slide.buttonLink && slide.id === 2 ? (
                   <div className="mt-6 ml-48">
                     <Link 
-                      href={slide.buttonLink} 
+                      href='#'
+                      onClick={(e) => e.preventDefault()}
                       className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
                     >
                       Sign Up here
@@ -147,7 +149,8 @@ export default function HeroSection() {
                   </div>
                 ) : slide.buttonText && slide.buttonLink && (
                   <Link 
-                    href={slide.buttonLink} 
+                    href='#'
+                    onClick={(e) => e.preventDefault()}
                     className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-6 py-3 rounded-md transition duration-300`}
                   >
                     {slide.buttonText}
@@ -193,6 +196,16 @@ export default function HeroSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-1px)] overflow-hidden">
+        <SectionTransition
+          fromColor="transparent"
+          toColor="white"
+          accentColor="#950713"
+          variant="wave"
+          className="z-20"
+        />
+      </div>
     </div>
   );
 }

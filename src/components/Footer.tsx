@@ -89,53 +89,14 @@ export default function Footer() {
             </div>
           </div>
           
-          <div>
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 shadow-md">
-              <h4 className="text-xl font-semibold text-blue-900 mb-4">Send us a message</h4>
-              
-              <div className="mb-4">
-                <label htmlFor="contactEmail" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="contactEmail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  placeholder="Your email address"
-                  required
-                />
-              </div>
-              
-              <div className="mb-4">
-                <label htmlFor="contactMessage" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="contactMessage"
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  placeholder="Your message"
-                  required
-                ></textarea>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full py-2 px-4 bg-[#FF00FF] hover:bg-orange-600 rounded-md font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+        
         </div>
         
         <div className="mt-12 pt-8 border-t border-white text-center text-sm text-blue-200">
           <p>&copy; {new Date().getFullYear()} Young Expert Group | Designed by Institute Of Modern Technologies.</p>
           <p className="mt-2">
        Privacy Policy | 
-            <Link href="/terms" className="hover:text-orange-300 transition ml-2">Terms of Service</Link>
+            <Link href="#" onClick={(e) => e.preventDefault()} className="hover:text-orange-300 transition ml-2">Terms of Service</Link>
           </p>
         </div>
       </div>

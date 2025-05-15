@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import SectionTransition from './SectionTransition';
 
 export default function FAQSection() {
   // For FAQ accordion
@@ -41,16 +42,27 @@ export default function FAQSection() {
   
   return (
     <section id="faq" className="pt-32 pb-16 px-6 relative overflow-hidden">
+      {/* Modern morphing transition at the top */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="white"
+          variant="wave"
+          flipY={true}
+          className="z-20"
+        />
+      </div>
+      
       {/* Section transition decorator - top wave effect */}
-      <div className="absolute top-0 left-0 w-full h-32 overflow-hidden z-10">
-        {/* Burgundy wave shape */}
+      <div className="absolute top-0 left-0 w-full h-32 overflow-hidden z-10 animate-wave-rise opacity-0">
+        {/* Burgundy wave shape with animation */}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute -top-5 left-0 w-full h-auto" preserveAspectRatio="none">
-          <path fill="#950713" fillOpacity="0.1" d="M0,192L48,181.3C96,171,192,149,288,149.3C384,149,480,171,576,176C672,181,768,171,864,149.3C960,128,1056,96,1152,101.3C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+          <path fill="#950713" fillOpacity="0.1" d="M0,192L48,181.3C96,171,192,149,288,149.3C384,149,480,171,576,176C672,181,768,171,864,149.3C960,128,1056,96,1152,101.3C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" className="animate-path-morph"></path>
         </svg>
         
-        {/* Second wave for layered effect */}
+        {/* Second wave for layered effect with animation */}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute -top-3 left-0 w-full h-auto" preserveAspectRatio="none">
-          <path fill="#00FFFF" fillOpacity="0.08" d="M0,96L60,122.7C120,149,240,203,360,208C480,213,600,171,720,138.7C840,107,960,85,1080,96C1200,107,1320,149,1380,170.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+          <path fill="#00FFFF" fillOpacity="0.08" d="M0,96L60,122.7C120,149,240,203,360,208C480,213,600,171,720,138.7C840,107,960,85,1080,96C1200,107,1320,149,1380,170.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" className="animate-path-morph"></path>
         </svg>
 
         {/* Modern geometric accents */}
@@ -181,7 +193,8 @@ export default function FAQSection() {
               {faqCategories.map((category, index) => (
                 <a 
                   key={index} 
-                  href={category.href}
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="block text-gray-700 hover:text-[#00FFFF] py-2 border-b border-gray-200 last:border-b-0 transition-colors duration-200"
                 >
                   {category.name}
@@ -226,6 +239,16 @@ export default function FAQSection() {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-2px)] overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="#f9fafb" // gray-50 for courses section
+          variant="diagonal"
+          className="animate-morph-in"
+        />
       </div>
     </section>
   );

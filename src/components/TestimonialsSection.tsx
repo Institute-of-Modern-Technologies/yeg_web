@@ -2,6 +2,7 @@
 
 import TestimonialCard from './TestimonialCard';
 import { useState } from 'react';
+import SectionTransition from './SectionTransition';
 
 const testimonials = [
   {
@@ -67,8 +68,20 @@ export default function TestimonialsSection() {
   };
   
   return (
-    <section className="py-16 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 px-6 bg-gray-50 relative overflow-hidden">
+      {/* Top morphing transition */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden z-20">
+        <SectionTransition
+          fromColor="white"
+          toColor="#f9fafb"
+          accentColor="#00FFFF"
+          variant="diagonal"
+          flipY={true}
+          className="animate-morph-in"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-blue-900 mb-4">What Our Community Says</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -122,6 +135,17 @@ export default function TestimonialsSection() {
             </svg>
           </button>
         </div>
+      </div>
+      
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-1px)] overflow-hidden z-20">
+        <SectionTransition
+          fromColor="#f9fafb"
+          toColor="white"
+          accentColor="#950713"
+          variant="curve"
+          className="z-10"
+        />
       </div>
     </section>
   );

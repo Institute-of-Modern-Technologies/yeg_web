@@ -54,7 +54,8 @@ export default function EventCard({ id, title, date, time, location, image }: Ev
         
         <div className="mt-auto">
           <Link 
-            href={`/events/${id}`}
+            href="#"
+            onClick={(e) => e.preventDefault()}
             className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-md transition"
           >
             Learn More

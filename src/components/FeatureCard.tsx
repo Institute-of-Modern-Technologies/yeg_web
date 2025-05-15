@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import SectionTransition from './SectionTransition';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -11,7 +14,8 @@ interface FeatureCardProps {
 export default function FeatureCard({ icon, title, subtitle, link }: FeatureCardProps) {
   return (
     <Link 
-      href={link}
+      href={link.startsWith('#') ? link : '#'}
+      onClick={link.startsWith('#') ? undefined : (e) => e.preventDefault()}
       className="group flex flex-col items-center justify-center text-center p-5 bg-white border-2 border-[#950713] rounded-xl transition-all duration-500 hover:border-[#FF00FF]/80 hover:scale-105 h-44 w-44 mx-auto shadow-[0_15px_30px_-10px_rgba(0,0,0,0.2)] relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-white opacity-100 group-hover:opacity-95 transition-opacity duration-500"></div>
@@ -32,7 +36,18 @@ export default function FeatureCard({ icon, title, subtitle, link }: FeatureCard
 
 export function FeatureSection() {
   return (
-    <section id="features" className="bg-[#950713] py-16 relative overflow-hidden shadow-[0_0_50px_15px_rgba(0,0,0,0.1)] border-y-2 border-[#FF00FF]/20 z-10">
+    <section id="features" className="py-16 relative overflow-hidden z-10">
+      {/* Top morphing transition */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="white"
+          accentColor="#00FFFF"
+          variant="blob"
+          flipY={true}
+        />
+      </div>
+      
       <div className="absolute inset-0 bg-[#FFFFFF] pointer-events-none"></div>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Subtle decorative elements */}
@@ -117,8 +132,17 @@ export function FeatureSection() {
         /> */}
 
         </div>
-        
+      </div>
       
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-1px)] overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="#ffffff"
+          accentColor="#950713"
+          variant="zigzag"
+          className="z-10"
+        />
       </div>
     </section>
   );

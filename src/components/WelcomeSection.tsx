@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
+import SectionTransition from './SectionTransition';
 
 export default function WelcomeSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -66,7 +67,19 @@ export default function WelcomeSection() {
   }, []);
   
   return (
-    <section id="welcome" className="py-16 px-6 bg-white relative overflow-hidden shadow-[0_10px_70px_-10px_rgba(255,0,255,0.15),_0_0_30px_rgba(255,0,255,0.1)] border-y-4 border-gray-100">
+    <section id="welcome" className="py-16 px-6 bg-white relative overflow-hidden border-y-0">
+      {/* Top morphing transition */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
+        <SectionTransition
+          fromColor="#ffffff"
+          toColor="white"
+          accentColor="#950713"
+          variant="curve"
+          flipY={true}
+          height="h-32"
+        />
+      </div>
+      
       {/* Subtle corner decorations */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-b from-[#FF00FF]/5 to-transparent rounded-bl-full pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-t from-[#FF00FF]/5 to-transparent rounded-tr-full pointer-events-none"></div>
@@ -105,7 +118,8 @@ export default function WelcomeSection() {
             </p>
 
             <Link
-              href="/about"
+              href="#"
+              onClick={(e) => e.preventDefault()}
               className="group inline-flex items-center bg-[#FF00FF] text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-[#FF00FF]/40 hover:shadow-xl relative overflow-hidden"
             >
               <span className="relative z-10 mr-2">Find Out More</span>
@@ -294,6 +308,17 @@ export default function WelcomeSection() {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-1px)] overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="white"
+          accentColor="#00FFFF"
+          variant="stairs"
+          className="z-10 animate-morph-in"
+        />
       </div>
     </section>
   );

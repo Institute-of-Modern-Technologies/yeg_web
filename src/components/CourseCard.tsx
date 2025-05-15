@@ -1,6 +1,9 @@
 import { Course } from '@/types';
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
+import SectionTransition from './SectionTransition';
 
 // Map of course subjects to appropriate Unsplash images
 const courseImages: Record<string, string> = {
@@ -44,19 +47,20 @@ export default function CourseCard({ course }: CourseCardProps) {
       
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-bold text-blue-900">{course.title}</h3>
-          <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">
+          <h3 className="text-xl font-bold text-[#c60313]">{course.title}</h3>
+          <span className="bg-[#950713]/10 text-[#950713] text-xs font-medium px-2.5 py-0.5 rounded">
             {course.level}
           </span>
         </div>
         
-        <p className="text-gray-700 mb-4 line-clamp-2">{course.description}</p>
+        <p className="text-[#c60313]/80 mb-4 line-clamp-2">{course.description}</p>
         
         <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-500">{course.duration}</span>
+          <span className="text-sm text-[#950713]">{course.duration}</span>
           <Link 
-            href={`/courses/${course.id}`}
-            className="text-blue-700 hover:text-blue-900 font-medium text-sm"
+            href="#"
+            className="text-[#950713] hover:text-[#950713]/90 font-medium text-sm"
+            onClick={(e) => e.preventDefault()}
           >
             Learn more →
           </Link>
@@ -107,9 +111,19 @@ export function CoursesSection() {
   ];
   
   return (
-    <section className="py-16 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-blue-900 mb-10 text-center">Latest Courses</h2>
+    <section className="relative py-16 px-6 bg-gray-50">
+      {/* Top morphing transition */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="#f9fafb" // gray-50
+          variant="blob"
+          flipY={true}
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <h2 className="text-3xl font-bold text-[#950713] mb-10 text-center transition-all duration-700 hover:tracking-wider">Events</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {courses.map((course) => (
@@ -122,13 +136,23 @@ export function CoursesSection() {
         
         <div className="text-center mt-10">
           <Link
-            href="/courses"
-            className="inline-block bg-blue-900 hover:bg-blue-800 text-white font-medium px-6 py-3 rounded-md transition"
+            href="#"
+            className="inline-block bg-[#950713] hover:bg-[#950713]/80 text-white font-medium px-6 py-3 rounded-md transition hover:scale-105 duration-300"
+            onClick={(e) => e.preventDefault()}
           >
-            All Courses
+            All Events
           </Link>
         </div>
       </div>
+      
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-2px)] overflow-hidden">
+        <SectionTransition
+          fromColor="#f9fafb" // gray-50
+          toColor="white"
+          variant="geometric"
+        />
+      </div>
     </section>
   );
-} 
+}

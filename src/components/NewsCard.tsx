@@ -43,7 +43,8 @@ export default function NewsCard({ id, title, summary, date, category, image }: 
         <p className="text-gray-700 mb-4 line-clamp-2">{summary}</p>
         
         <Link 
-          href={`/news/${id}`}
+          href="#"
+          onClick={(e) => e.preventDefault()}
           className="inline-flex items-center text-blue-700 hover:text-blue-900 font-medium"
         >
           Read more

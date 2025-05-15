@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import SectionTransition from './SectionTransition';
 
 // Number counter component that animates from 0 to the target value
 function NumberCounter({ end, duration = 2000, suffix = '' }: { end: number, duration?: number, suffix?: string }) {
@@ -94,8 +95,20 @@ export default function EducationNewsSection() {
     };
   }, []);
   return (
-    <section className="bg-[#66050D] py-16 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="bg-gradient-to-b from-[#950713] to-[#66050D] py-16 relative overflow-hidden">
+      {/* Top morphing transition */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="#950713"
+          accentColor="#00FFFF"
+          variant="geometric"
+          flipY={true}
+          className="z-10"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left column - News items */}
           <div className="lg:col-span-8">
@@ -191,7 +204,7 @@ export default function EducationNewsSection() {
                   <span className="text-white mr-4 font-bold">May 11, 2025</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
-                  <Link href="#" className="hover:text-orange-400 transition-colors">
+                  <Link href="#" onClick={(e) => e.preventDefault()} className="hover:text-orange-400 transition-colors">
                Happy Mother's Day
                   </Link>
                 </h3>
@@ -200,7 +213,7 @@ export default function EducationNewsSection() {
                 </p>
                 <div className="flex items-center text-sm">
                   <span className="text-gray-400">Posted in:</span>
-                  <Link href="#" className="text-orange-400 ml-2 hover:underline">Lunch</Link>
+                  <Link href="#" onClick={(e) => e.preventDefault()} className="text-orange-400 ml-2 hover:underline">Lunch</Link>
                 </div>
               </div>
             </div>
@@ -233,7 +246,7 @@ export default function EducationNewsSection() {
                   <span className="text-white mr-4 font-bold">JANUARY 24, 2020</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
-                  <Link href="#" className="hover:text-orange-400 transition-colors">
+                  <Link href="#" onClick={(e) => e.preventDefault()} className="hover:text-orange-400 transition-colors">
                  The Day is Near
                   </Link>
                 </h3>
@@ -271,7 +284,7 @@ export default function EducationNewsSection() {
                   <span className="text-white font-bold">JANUARY 24, 2020</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
-                  <Link href="#" className="hover:text-orange-400 transition-colors">
+                  <Link href="#" onClick={(e) => e.preventDefault()} className="hover:text-orange-400 transition-colors">
                  There lived a Queensurburg
                   </Link>
                 </h3>
@@ -328,6 +341,7 @@ export default function EducationNewsSection() {
                 <div className="mt-8">
                   <a 
                     href="#" 
+                    onClick={(e) => e.preventDefault()}
                     className="block w-full text-center bg-[#00FFFF] hover:bg-cyan-600 text-black py-3 px-6 rounded-md transition-colors duration-300 font-medium"
                   >
                     <span className="flex items-center justify-center">
@@ -342,6 +356,17 @@ export default function EducationNewsSection() {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-1px)] overflow-hidden">
+        <SectionTransition
+          fromColor="#66050D"
+          toColor="#f9fafb"
+          accentColor="#00FFFF"
+          variant="diagonal"
+          className="z-10"
+        />
       </div>
     </section>
   );

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SectionTransition from './SectionTransition';
 
 interface EventType {
   id: number;
@@ -69,6 +70,18 @@ export default function EventsSection() {
 
   return (
     <section className="relative overflow-hidden py-20" id="events">
+      {/* Top morphing transition */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden z-20">
+        <SectionTransition
+          fromColor="#f9fafb"
+          toColor="#66050D"
+          accentColor="#00FFFF"
+          variant="curve"
+          flipY={true}
+          className="animate-morph-in"
+        />
+      </div>
+      
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-[#66050D] opacity-95"></div>
       
@@ -190,7 +203,8 @@ export default function EventsSection() {
               <div className="p-5">
                 
                 <Link 
-                  href="/partners" 
+                  href="#" 
+                  onClick={(e) => e.preventDefault()}
                   className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium px-4 py-2 rounded-lg flex items-center justify-center hover:from-orange-600 hover:to-red-600 transition-all duration-300"
                 >
                   <span>Get Details</span>
@@ -241,7 +255,8 @@ export default function EventsSection() {
               
               <div className="mt-4 flex justify-center">
                 <Link 
-                  href="/partners" 
+                  href="#" 
+                  onClick={(e) => e.preventDefault()}
                   className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center"
                 >
                   <span>View All Partners</span>
@@ -253,6 +268,17 @@ export default function EventsSection() {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-1px)] overflow-hidden z-20">
+        <SectionTransition
+          fromColor="#66050D"
+          toColor="white"
+          accentColor="#950713"
+          variant="blob"
+          className="z-10"
+        />
       </div>
     </section>
   );

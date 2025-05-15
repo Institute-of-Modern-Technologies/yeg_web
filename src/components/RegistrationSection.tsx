@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import SectionTransition from './SectionTransition';
 
 export default function RegistrationSection() {
   const [formData, setFormData] = useState({
@@ -39,12 +40,23 @@ export default function RegistrationSection() {
 
   
   return (
-    <section id="registration" className="py-16 px-6 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-      {/* Decorative background elements */}
+    <section id="registration" className="py-16 px-6 bg-gradient-to-b from-white to-white relative overflow-hidden">
+      {/* Top morphing transition */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
+        <SectionTransition
+          fromColor="#f9fafb" // gray-50 from education news section
+          toColor="white"
+          variant="blob"
+          flipY={true}
+          flipX={true}
+        />
+      </div>
+      
+      {/* Decorative background elements with animation */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-20 right-20 w-80 h-80 bg-[#FF00FF]/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute top-1/4 -left-20 w-60 h-60 bg-[#2a1e5c]/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-10 right-1/4 w-72 h-40 bg-[#c60313]/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute -top-20 right-20 w-80 h-80 bg-[#FF00FF]/5 rounded-full filter blur-3xl animate-slowpulse"></div>
+        <div className="absolute top-1/4 -left-20 w-60 h-60 bg-[#2a1e5c]/5 rounded-full filter blur-3xl animate-slowpulse delay-500"></div>
+        <div className="absolute bottom-10 right-1/4 w-72 h-40 bg-[#950713]/5 rounded-full filter blur-3xl animate-slowpulse delay-1000"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -155,6 +167,16 @@ export default function RegistrationSection() {
           
 
         </div>
+      </div>
+      
+      {/* Bottom morphing transition */}
+      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-2px)] overflow-hidden">
+        <SectionTransition
+          fromColor="white"
+          toColor="white"
+          variant="geometric"
+          className="animate-morph-in"
+        />
       </div>
     </section>
   );

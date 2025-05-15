@@ -49,7 +49,7 @@ export default function NewsSection() {
           </div>
           
           <Link 
-            href="/news" 
+            href="javascript:void(0)" onClick={(e) => e.preventDefault()} 
             className="text-orange-500 hover:text-orange-600 font-medium flex items-center"
           >
             View all news
