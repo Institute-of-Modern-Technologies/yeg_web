@@ -94,15 +94,15 @@ export default function EventsSection() {
         {/* Section header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-2">
-            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent text-sm font-bold uppercase tracking-wider">
+            <span className="bg-[#00FFFF] bg-clip-text text-transparent text-sm font-bold uppercase tracking-wider">
               Experience & Connect
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Partnered <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">Schools</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#00FFFF] mb-6">
+            Partnered <span className="text-transparent bg-clip-text bg-[#00FFFF]">Schools</span>
           </h2>
-          <p className="text-blue-100 max-w-2xl mx-auto text-lg">
-          Your school can be part of our growing network—let’s teach, grow, and innovate together.
+          <p className="text-[#FFFF00]/90 max-w-2xl mx-auto text-lg">
+            Your school can be part of our growing network—let's teach, grow, and innovate together.
           </p>
         </div>
         
@@ -217,12 +217,12 @@ export default function EventsSection() {
           ))}
           
           {/* Mobile partners section */}
-          <div className="bg-gradient-to-br from-[#2e225f] to-[#1a1238] p-6 rounded-xl border border-indigo-500/30 shadow-2xl relative overflow-hidden mt-10
+          <div className="bg-gradient-to-br from-[#950713] to-[#550309] p-6 rounded-xl border border-[#FF00FF]/30 shadow-2xl relative overflow-hidden mt-10
             before:absolute before:inset-0 before:bg-[url('/images/pattern-grid.png')] before:bg-cover before:opacity-5 before:z-0">
             
             {/* Decorative elements */}
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-orange-500 rounded-full filter blur-[60px] opacity-10"></div>
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 rounded-full filter blur-[60px] opacity-10"></div>
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#00FFFF] rounded-full filter blur-[60px] opacity-10"></div>
             
             <div className="relative z-10">
               <h3 className="text-xl font-bold text-white mb-3 flex items-center justify-center">
@@ -257,7 +257,7 @@ export default function EventsSection() {
                 <Link 
                   href="#" 
                   onClick={(e) => e.preventDefault()}
-                  className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center"
+                  className="bg-gradient-to-r from-[#FF00FF] to-[#950713] text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center"
                 >
                   <span>View All Partners</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">

@@ -67,22 +67,21 @@ export default function WelcomeSection() {
   }, []);
   
   return (
-    <section id="welcome" className="py-16 px-6 bg-white relative overflow-hidden border-y-0">
-      {/* Top morphing transition */}
-      <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
-        <SectionTransition
-          fromColor="#ffffff"
-          toColor="white"
-          accentColor="#950713"
-          variant="curve"
-          flipY={true}
-          height="h-32"
-        />
-      </div>
+    <section id="welcome" className="pt-20 pb-16 px-6 bg-white relative overflow-hidden border-y-0">
+      {/* Top transition removed as requested */}
       
-      {/* Subtle corner decorations */}
+      {/* Light cyan shadows similar to FAQ section */}
+      <div className="absolute top-0 inset-x-0 h-64 rounded-full bg-gradient-to-b from-[#00FFFF]/20 to-transparent filter blur-xl -z-10 pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-full h-64 rounded-full bg-gradient-to-tl from-[#00FFFF]/15 to-transparent filter blur-xl -z-10 pointer-events-none"></div>
+      
+      {/* Additional subtle corner decorations */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-b from-[#FF00FF]/5 to-transparent rounded-bl-full pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-t from-[#FF00FF]/5 to-transparent rounded-tr-full pointer-events-none"></div>
+      
+      {/* Modern geometric accents */}
+      <div className="absolute top-5 left-1/4 w-6 h-6 bg-[#00FFFF]/20 rounded-md transform rotate-45 animate-float opacity-60 pointer-events-none"></div>
+      <div className="absolute top-12 right-1/3 w-8 h-8 bg-[#00FFFF]/30 rounded-full animate-float-delayed opacity-60 pointer-events-none"></div>
+      <div className="absolute top-6 right-1/4 w-4 h-10 bg-[#00FFFF]/20 rounded-sm transform -rotate-12 animate-float opacity-60 pointer-events-none"></div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-[#000000] mb-4 relative inline-block">

@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
   };
   
   return (
-    <section className="py-16 px-6 bg-gray-50 relative overflow-hidden">
+    <section className="py-16 px-6 bg-gradient-to-b from-white via-[#f9fafb] to-white relative overflow-hidden">
       {/* Top morphing transition */}
       <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden z-20">
         <SectionTransition
@@ -83,8 +83,8 @@ export default function TestimonialsSection() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">What Our Community Says</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#950713] mb-4">What Our Community Says</h2>
+          <p className="text-black/70 max-w-2xl mx-auto">
             Hear from our students, parents, and community members about their experiences with our educational programs.
           </p>
         </div>
@@ -104,10 +104,10 @@ export default function TestimonialsSection() {
         <div className="flex justify-center items-center mt-10 space-x-4">
           <button
             onClick={handlePrevPage}
-            className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+            className="p-2 rounded-full border border-[#FF00FF]/30 hover:bg-[#FF00FF]/10 transition"
             aria-label="Previous testimonials"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#950713]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -118,7 +118,7 @@ export default function TestimonialsSection() {
                 key={index}
                 onClick={() => setCurrentPage(index)}
                 className={`w-3 h-3 rounded-full ${
-                  currentPage === index ? 'bg-orange-500' : 'bg-gray-300'
+                  currentPage === index ? 'bg-[#FF00FF]' : 'bg-[#00FFFF]/30'
                 }`}
                 aria-label={`Go to page ${index + 1}`}
               />
@@ -127,10 +127,10 @@ export default function TestimonialsSection() {
           
           <button
             onClick={handleNextPage}
-            className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+            className="p-2 rounded-full border border-[#FF00FF]/30 hover:bg-[#FF00FF]/10 transition"
             aria-label="Next testimonials"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#950713]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>

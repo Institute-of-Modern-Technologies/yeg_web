@@ -12,7 +12,7 @@ export default function TestimonialCard({ name, role, testimonial, image }: Test
   const imgSrc = image.startsWith('http') ? image : image.replace(/\.(jpg|png)$/, '.svg');
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+    <div className="bg-white p-8 rounded-lg shadow-md border border-[#00FFFF]/20 hover:border-[#950713]/30 transition-all duration-300">
       <div className="flex items-center mb-4">
         <div className="relative h-16 w-16 rounded-full overflow-hidden mr-4">
           <Image 
@@ -24,19 +24,19 @@ export default function TestimonialCard({ name, role, testimonial, image }: Test
         </div>
         
         <div>
-          <h3 className="text-lg font-bold text-blue-900">{name}</h3>
-          <p className="text-gray-600 text-sm">{role}</p>
+          <h3 className="text-lg font-bold text-[#950713]">{name}</h3>
+          <p className="text-black/70 text-sm">{role}</p>
         </div>
       </div>
       
-      <p className="text-gray-700">&quot;{testimonial}&quot;</p>
+      <p className="text-black/80">&quot;{testimonial}&quot;</p>
       
       <div className="mt-4 flex">
         {[...Array(5)].map((_, i) => (
           <svg 
             key={i}
             xmlns="http://www.w3.org/2000/svg" 
-            className="h-5 w-5 text-yellow-400" 
+            className="h-5 w-5 text-[#FFFF00]" 
             viewBox="0 0 20 20" 
             fill="currentColor"
           >
@@ -74,13 +74,13 @@ export function TestimonialsSection() {
   ];
   
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section className="py-16 px-6 bg-gradient-to-b from-white via-[#f9fafb] to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-blue-900 mb-2 text-center">
+        <h2 className="text-3xl font-bold text-[#950713] mb-2 text-center">
           Explore the Students Experience
         </h2>
-        <p className="text-gray-600 max-w-3xl mx-auto text-center mb-12">
-          See what our parents and students have to say about their experience at Ed Academy
+        <p className="text-black/70 max-w-3xl mx-auto text-center mb-12">
+          See what our parents and students have to say about their experience at Young Experts Group
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

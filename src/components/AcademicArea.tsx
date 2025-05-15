@@ -34,13 +34,13 @@ function AcademicAreaItem({ icon, imageSrc, title, description, link }: Academic
             className="object-contain"
           />
         ) : icon ? (
-          <div className="w-full h-full bg-[#2a1e5c] flex items-center justify-center">
+          <div className="w-full h-full bg-[#950713] flex items-center justify-center">
             {icon}
           </div>
         ) : null}
       </div>
-      <h3 className="text-base font-bold text-[#2a1e5c] mb-1 group-hover:text-[#FF00FF] transition-colors">{title}</h3>
-      <p className="text-gray-600 text-xs max-w-[140px]">{description}</p>
+      <h3 className="text-base font-bold text-[#950713] mb-1 group-hover:text-[#FF00FF] transition-colors">{title}</h3>
+      <p className="text-black/70 text-xs max-w-[140px]">{description}</p>
     </Link>
   );
 }
@@ -60,10 +60,10 @@ export default function AcademicAreasSection() {
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="text-3xl font-bold text-[#2a1e5c] mb-4 text-center">
-          Why <span className='text-red-500'>Young</span> <span className='text-yellow-500'>Experts</span> <span className='text-cyan-500'>Group</span> best Solution for Innovation
+        <h2 className="text-3xl font-bold text-[#950713] mb-4 text-center">
+          Why <span className='text-[#FF00FF]'>Young</span> <span className='text-[#FFFF00]'>Experts</span> <span className='text-[#00FFFF]'>Group</span> best Solution for Innovation
         </h2>
-        <p className="text-gray-600 text-lg max-w-3xl mx-auto text-center mb-12">
+        <p className="text-black/70 text-lg max-w-3xl mx-auto text-center mb-12">
           Our comprehensive curriculum covers all key subjects with expert trainers and innovative methods.
         </p>
         

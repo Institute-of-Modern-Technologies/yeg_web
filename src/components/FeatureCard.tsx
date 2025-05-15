@@ -134,16 +134,8 @@ export function FeatureSection() {
         </div>
       </div>
       
-      {/* Bottom morphing transition */}
-      <div className="absolute bottom-0 left-0 right-0 translate-y-[calc(100%-1px)] overflow-hidden">
-        <SectionTransition
-          fromColor="white"
-          toColor="#ffffff"
-          accentColor="#950713"
-          variant="zigzag"
-          className="z-10"
-        />
-      </div>
+      {/* Modern gradient transition to Welcome Section */}
+      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent via-[#00FFFF]/20 to-[#00FFFF]/40"></div>
     </section>
   );
 }
