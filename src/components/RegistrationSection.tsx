@@ -10,12 +10,6 @@ export default function RegistrationSection() {
     teacherName: ''
   });
   
-  // For FAQ accordion
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -42,29 +36,7 @@ export default function RegistrationSection() {
     alert('Registration submitted successfully!');
   };
 
-  // FAQ data
-  const faqs = [
-    {
-      question: "What age groups does YEG program support?",
-      answer: "The Young Experts Group (YEG) program is designed for students between 6-16 years old, with specialized curriculum adapted for different age ranges."
-    },
-    {
-      question: "How often are classes conducted?",
-      answer: "Classes are typically held twice weekly, with each session lasting 1.5 hours. We also offer intensive holiday programs and special weekend workshops."
-    },
-    {
-      question: "What technology skills will students learn?",
-      answer: "Students will learn age-appropriate skills including basic programming, robotics, digital design, app development, and emerging technologies like AI and blockchain fundamentals."
-    },
-    {
-      question: "How do you incorporate entrepreneurship into the curriculum?",
-      answer: "Our entrepreneurship modules teach practical business skills through project-based learning. Students develop products or services, create business plans, and even participate in pitch competitions."
-    },
-    {
-      question: "Is prior technical knowledge required?",
-      answer: "No prior experience is required. Our program starts with fundamentals and progressively builds skills as students advance through the stages."
-    }
-  ];
+
   
   return (
     <section id="registration" className="py-16 px-6 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
@@ -77,15 +49,15 @@ export default function RegistrationSection() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-4 text-[#2a1e5c] relative inline-block">
-            <span className="relative z-10">Registration & FAQs</span>
-            <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#FF00FF] rounded-full"></span>
+          <h2 className="text-4xl font-bold mb-4 text-[#000000] relative inline-block">
+            <span className="relative z-10">Registration</span>
+          
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Complete your registration form and explore our frequently asked questions</p>
+          <p className="text-gray-800 max-w-2xl mx-auto">Complete your registration form to join our innovative programs</p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* Registration Form Column */}
+        <div className="max-w-lg mx-auto">
+          {/* Registration Form */}
           <div className="bg-white p-8 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.2)] border-2 border-[#FF00FF]/20 transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.3)] hover:border-[#FF00FF]/40">
             <h3 className="text-2xl font-bold mb-6 text-[#2a1e5c] flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#FF00FF] mr-2" viewBox="0 0 20 20" fill="currentColor">
@@ -181,55 +153,7 @@ export default function RegistrationSection() {
             </form>
           </div>
           
-          {/* FAQ Accordion Column */}
-          <div className="bg-white p-8 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.2)] border-2 border-[#FF00FF]/20 transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.3)] hover:border-[#FF00FF]/40">
-            <h3 className="text-2xl font-bold mb-6 text-[#2a1e5c] flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#FF00FF] mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
-              </svg>
-              Frequently Asked Questions
-            </h3>
-            
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className={`w-full text-left p-4 flex justify-between items-center transition-all duration-300 ${activeIndex === index ? 'bg-gradient-to-r from-[#2a1e5c]/10 to-[#FF00FF]/10 shadow-sm' : 'hover:bg-gray-50'}`}
-                    aria-controls={`faq-answer-${index}`}
-                    aria-expanded={activeIndex === index}
-                  >
-                    <span className="font-medium text-gray-800">{faq.question}</span>
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className={`h-5 w-5 text-[#FF00FF] transition-transform duration-300 ${activeIndex === index ? 'transform rotate-180' : ''}`} 
-                      viewBox="0 0 20 20" 
-                      fill="currentColor"
-                    >
-                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </button>
-                  <div 
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-                  >
-                    <div className="p-4 bg-gradient-to-r from-gray-50 to-white text-gray-600 border-t border-gray-100">
-                      <p className="leading-relaxed">{faq.answer}</p>
-                      {index === 0 && (
-                        <div className="mt-2 flex justify-end">
-                          <span className="text-[#FF00FF] text-sm font-medium flex items-center hover:text-[#c60313] transition-colors cursor-pointer">
-                            Learn more about our age groups
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

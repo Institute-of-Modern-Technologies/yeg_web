@@ -76,12 +76,18 @@ export default function WelcomeSection() {
             Welcome
            
           </h2>
-          <p className="text-[#000000] max-w-2xl mx-auto text-lg">Experience excellence in education with YEG</p>
+          <h4 className="text-black font-bold flex flex-row    ml-72 mx-auto">
+              Equipping young minds with skills in
+              <span className="text-[#c60313] transition-all duration-300 mr-3"> Technology</span> 
+              <span className="text-[#000000] transition-all duration-300 mr-3 bg-[#FFFF00] px-2 rounded"> Entrepreneurship</span>
+              <span className="text-[#000000] transition-all duration-300 mr-3"> and</span>
+              <span className="text-[#FF00FF] transition-all duration-300 mr-3"> Creativity</span>.
+            </h4>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column */}
-          <div className="lg:col-span-4 bg-white p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border-2 border-[#FF00FF] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
+          <div className="lg:col-span-4 bg-white p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border-2 border-[#000000] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
             <h3 className="text-3xl font-bold text-[#000000] mb-4 flex items-center  border-[#000000]">
               <span className="w-10 h-10 rounded-full bg-[#FF00FF] mr-3 flex items-center justify-center text-white shadow-[0_4px_10px_rgba(0,0,0,0.3)]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -234,7 +240,7 @@ export default function WelcomeSection() {
           </div>
 
           {/* Right Column */}
-          <div className="lg:col-span-4 bg-white p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border-2 border-[#FF00FF] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
+          <div className="lg:col-span-4 bg-white p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border-2 border-[#000000] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
             <h3 className="text-3xl font-bold text-[#000000] mb-4 border-b-2 border-[#000000]/50 pb-2">Why Partner With Us</h3>
 
             <div className="mb-6">

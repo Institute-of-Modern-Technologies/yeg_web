@@ -41,6 +41,28 @@ module.exports = {
         marquee: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' }
+        },
+        float: {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' },
+          '100%': { transform: 'translateY(0)' }
+        },
+        floatDelayed: {
+          '0%': { transform: 'translateY(-15px)' },
+          '50%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-15px)' }
+        },
+        slowPulse: {
+          '0%, 100%': { opacity: 0.4, transform: 'scale(1)' },
+          '50%': { opacity: 0.6, transform: 'scale(1.05)' }
+        },
+        questionMarkBounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        },
+        blink: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.3 }
         }
       },
       animation: {
@@ -49,7 +71,12 @@ module.exports = {
         'thunderShake': 'thunderShake 10s infinite',
         'rainDrop': 'rainDrop 1s linear infinite',
         'cloudMove': 'cloudMove 20s infinite ease-in-out',
-        'marquee': 'marquee 25s linear infinite'
+        'marquee': 'marquee 25s linear infinite',
+        'float': 'float 5s ease-in-out infinite',
+        'float-delayed': 'floatDelayed 5s ease-in-out infinite',
+        'slowpulse': 'slowPulse 8s ease-in-out infinite',
+        'question-bounce': 'questionMarkBounce 3s ease-in-out infinite',
+        'blink': 'blink 3s ease-in-out infinite'
       },
     },
   },

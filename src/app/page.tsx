@@ -5,6 +5,7 @@ import HighlightSection from "../components/HighlightSection";
 import WelcomeSection from "../components/WelcomeSection";
 import EducationNewsSection from "../components/EducationNewsSection";
 import RegistrationSection from "../components/RegistrationSection";
+import FAQSection from "../components/FAQSection";
 import EventsSection from "../components/EventsSection";
 import { CoursesSection } from "../components/CourseCard";
 import AcademicAreasSection from "../components/AcademicArea";
@@ -24,6 +25,7 @@ export default function Home() {
         <WelcomeSection />
         <EducationNewsSection />
         <RegistrationSection />
+        <FAQSection />
         <EventsSection />
         <CoursesSection />
         <AcademicAreasSection />
