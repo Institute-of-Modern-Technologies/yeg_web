@@ -242,7 +242,59 @@ export default function EventsSection() {
           </div>
         </div>
         
-        {/* Mobile partners section removed at user's request */}
+        {/* Mobile partners section */}
+        <div className="md:hidden mt-10">
+          <div className="bg-gradient-to-br from-[#950713] to-[#550309] p-6 rounded-xl border border-[#FF00FF]/30 shadow-2xl relative overflow-hidden
+            before:absolute before:inset-0 before:bg-[url('/images/pattern-grid.png')] before:bg-cover before:opacity-5 before:z-0">
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-[#FF00FF] rounded-full filter blur-[60px] opacity-10"></div>
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#00FFFF] rounded-full filter blur-[60px] opacity-10"></div>
+            
+            <div className="relative z-10">
+              <h3 className="text-xl font-bold text-white mb-3 flex items-center justify-center">
+                <div className="mr-2 bg-gradient-to-r from-[#FF00FF] to-[#950713] p-0.5 rounded-md inline-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#FFFF00]">Partnered</span> Schools
+              </h3>
+              
+              <div className="overflow-x-auto scrollbar-hide pb-4 -mx-2 px-2">
+                <div className="flex space-x-4 whitespace-nowrap">
+                  {partnerLogos.map((logo, index) => (
+                    <div 
+                      key={index} 
+                      className="flex-shrink-0 bg-white p-2 rounded-lg flex items-center justify-center w-[100px] h-12 shadow-lg border border-gray-100"
+                    >
+                      <Image 
+                        src={logo.src} 
+                        alt={logo.alt} 
+                        width={80} 
+                        height={40} 
+                        className="h-8 w-auto object-contain" 
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="mt-4 flex justify-center">
+                <Link 
+                  href="#" 
+                  onClick={(e) => e.preventDefault()}
+                  className="bg-gradient-to-r from-[#FF00FF] to-[#950713] text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center"
+                >
+                  <span>View All Partners</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       
       {/* Bottom morphing transition */}
