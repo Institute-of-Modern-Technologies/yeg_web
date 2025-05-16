@@ -18,6 +18,7 @@ interface SlideProps {
   buttonColor?: string;
   buttonHoverColor?: string;
   contentStyle?: string;
+ 
 }
 
 const slides: SlideProps[] = [
@@ -71,11 +72,12 @@ const slides: SlideProps[] = [
     buttonText: 'Join Now',
     buttonLink: '/community',
     layout: 'right',
-    titleColor: 'text-white',
+    titleColor: 'text-white' ,
     subtitleColor: 'text-[#FFFF00]',
-    buttonColor: 'bg-[#FFFF00]',
+    buttonColor: 'bg-[#FFFF00] text-black',
     buttonHoverColor: 'hover:bg-[#FFFF00]/80',
-    contentStyle: 'border-r-4 border-[#FFFF00] pr-6 bg-black/40 p-6 rounded-l-lg text-right'
+    contentStyle: 'border-r-4 border-[#FFFF00] pr-6 bg-black/40 p-6 rounded-l-lg text-right',
+   
   }
 ];
 
@@ -142,7 +144,7 @@ export default function HeroSection() {
                     <Link 
                       href='#'
                       onClick={(e) => e.preventDefault()}
-                      className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
+                      className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
                     >
                       Sign Up here
                     </Link>
@@ -151,7 +153,7 @@ export default function HeroSection() {
                   <Link 
                     href='#'
                     onClick={(e) => e.preventDefault()}
-                    className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-6 py-3 rounded-md transition duration-300`}
+                    className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-6 py-3 rounded-md transition duration-300`}
                   >
                     {slide.buttonText}
                   </Link>

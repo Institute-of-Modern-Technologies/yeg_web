@@ -61,7 +61,7 @@ export default function AcademicAreasSection() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-3xl font-bold text-[#950713] mb-4 text-center">
-          Why <span className='text-[#FF00FF]'>Young</span> <span className='text-[#FFFF00]'>Experts</span> <span className='text-[#00FFFF]'>Group</span> best Solution for Innovation
+          Why <span className='text-[#FF00FF]'>Young</span> <span className='text-[#FFFF00]'>Experts</span> <span className='text-[#00FFFF]'>Group</span> is the best Solution for Innovation
         </h2>
         <p className="text-black/70 text-lg max-w-3xl mx-auto text-center mb-12">
           Our comprehensive curriculum covers all key subjects with expert trainers and innovative methods.

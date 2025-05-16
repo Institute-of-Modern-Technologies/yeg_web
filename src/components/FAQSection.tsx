@@ -173,12 +173,12 @@ export default function FAQSection() {
               
               {/* Subtle glow effects around the illustration */}
               <div className="absolute top-0 inset-x-0 h-2/3 rounded-full bg-gradient-to-b from-[#00FFFF]/20 to-transparent filter blur-xl -z-10"></div>
-              <div className="absolute bottom-0 right-0 w-full h-2/3 rounded-full bg-gradient-to-tl from-[#950713]/15 to-transparent filter blur-xl -z-10"></div>
+              <div className="absolute bottom-0 right-0 w-full h-2/3 rounded-full bg-gradient-to-tl from-[#00FFFF]/20 to-transparent filter blur-xl -z-10"></div>
               
               {/* Modern decorative dots pattern */}
-              <div className="absolute -bottom-10 -right-10 grid grid-cols-3 gap-2 animate-float opacity-60">
+              <div className="absolute -bottom-10 -right-10 grid grid-cols-3 gap-2 animate-float opacity-80">
                 {[...Array(9)].map((_, i) => (
-                  <div key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-[#00FFFF]' : 'bg-[#950713]'} opacity-${Math.floor(Math.random() * 10) + 3}0`}></div>
+                  <div key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-[#00FFFF]' : 'bg-[#FFFF00]'} opacity-${Math.floor(Math.random() * 10) + 5}0`}></div>
                 ))}
               </div>
             </div>
@@ -189,15 +189,27 @@ export default function FAQSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left column - Categories */}
           <div className="col-span-1">
-            <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-6 text-[#FF00FF]">Categories</h3>
+            <div className="space-y-3">
               {faqCategories.map((category, index) => (
                 <a 
                   key={index} 
                   href="#"
                   onClick={(e) => e.preventDefault()}
-                  className="block text-gray-700 hover:text-[#00FFFF] py-2 border-b border-gray-200 last:border-b-0 transition-colors duration-200"
+                  className="block text-lg py-3 px-4 rounded-lg transition-all duration-300 relative overflow-hidden
+                    bg-gradient-to-r from-[#00FFFF]/5 to-white hover:from-[#00FFFF]/10 hover:to-white
+                    border-l-4 border-[#FF00FF] shadow-[0_0_15px_rgba(0,255,255,0.15)] hover:shadow-[0_0_20px_rgba(0,255,255,0.25)]
+                    flex items-center justify-between group
+                  "
                 >
-                  {category.name}
+                  <span className="font-medium text-[#FF00FF] group-hover:text-[#950713]">{category.name}</span>
+                  <div className="bg-[#00FFFF]/20 p-1.5 rounded-full transition-all duration-300 group-hover:bg-[#00FFFF]/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#FF00FF] group-hover:text-[#00FFFF] transition-all duration-300 transform group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  {/* Cyan glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#00FFFF]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </a>
               ))}
             </div>
@@ -205,7 +217,10 @@ export default function FAQSection() {
           
           {/* Right columns - FAQ Accordion */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-semibold mb-6 text-gray-800">About us</h3>
+            <h3 className="text-xl font-semibold mb-6 relative inline-block">
+              <span className="text-[#FF00FF] relative z-10">FAQ'S</span>
+              {/* <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-[#FF00FF] to-transparent rounded-full"></div> */}
+            </h3>
             
             {/* FAQ Accordion styled like the reference image */}
             <div className="space-y-4">
@@ -220,11 +235,11 @@ export default function FAQSection() {
                     aria-controls={`faq-answer-${index}`}
                     aria-expanded={activeIndex === index}
                   >
-                    <span className="font-medium text-gray-800 group-hover:text-[#00FFFF] transition-colors duration-200">
+                    <span className="font-medium text-[#FF00FF] group-hover:text-[#950713] transition-colors duration-200">
                       {faq.question}
                     </span>
-                    <div className="ml-4 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                    <div className="ml-4 flex-shrink-0 bg-[#00FFFF]/10 p-1 rounded-full transform transition-all duration-300 group-hover:bg-[#00FFFF]/20 group-hover:rotate-180">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#FF00FF] group-hover:text-[#00FFFF]" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
                     </div>
@@ -232,7 +247,11 @@ export default function FAQSection() {
                   <div 
                     className={`transition-all duration-300 ease-in-out overflow-hidden ${activeIndex === index ? 'max-h-96 opacity-100 py-3' : 'max-h-0 opacity-0'}`}
                   >
-                    <p className="text-gray-600">{faq.answer}</p>
+                    <div className="relative">
+                      <p className="text-gray-600 relative z-10">{faq.answer}</p>
+                      <div className="absolute top-0 left-0 w-1 h-full bg-[#00FFFF]/20 rounded-full"></div>
+                      <div className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-[#00FFFF]/10"></div>
+                    </div>
                   </div>
                 </div>
               ))}
