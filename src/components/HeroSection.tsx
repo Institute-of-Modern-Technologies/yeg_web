@@ -41,16 +41,16 @@ const slides: SlideProps[] = [
     image: '/images/Hero picture 3.png',
     title: 
       <div>
-        <div className="text-white text-xl ml-5 sm:ml-10 md:ml-20 lg:ml-40">Young Experts Group</div>
-        <div className="mt-2 ml-2 sm:ml-5 md:ml-8 lg:ml-10">
-          <span className="text-white font-bold text-3xl sm:text-4xl md:text-5xl">Get </span>
-          <span className="text-[#FFFF00] font-bold text-3xl sm:text-4xl md:text-5xl">CAREER- READY</span>
+        <div className="text-white text-base sm:text-xl ml-3 sm:ml-10 md:ml-20 lg:ml-40">Young Experts Group</div>
+        <div className="mt-1 sm:mt-2 ml-1 sm:ml-5 md:ml-8 lg:ml-10">
+          <span className="text-white font-bold text-2xl sm:text-4xl md:text-5xl">Get </span>
+          <span className="text-[#FFFF00] font-bold text-2xl sm:text-4xl md:text-5xl">CAREER- READY</span>
         </div>
-        <div className="mt-3 ml-4 sm:ml-8 md:ml-12 lg:ml-16">
-          <span className="text-[#FFFF00] font-bold text-xl sm:text-2xl md:text-3xl">Before</span>
-          <span className="text-white font-bold text-xl sm:text-2xl md:text-3xl">&nbsp;COMPLETING SCHOOL</span>
+        <div className="mt-2 sm:mt-3 ml-2 sm:ml-8 md:ml-12 lg:ml-16">
+          <span className="text-[#FFFF00] font-bold text-lg sm:text-2xl md:text-3xl">Before</span>
+          <span className="text-white font-bold text-lg sm:text-2xl md:text-3xl">&nbsp;COMPLETING SCHOOL</span>
         </div>
-        <div className="text-white text-sm sm:text-md md:text-lg mt-3 ml-2 sm:ml-3 md:ml-5">
+        <div className="text-white text-xs sm:text-md md:text-lg mt-2 sm:mt-3 ml-1 sm:ml-3 md:ml-5">
           Empowering Young Minds Through Tech and Entrepreneurship
         </div>
       </div>,
@@ -76,7 +76,7 @@ const slides: SlideProps[] = [
     subtitleColor: 'text-[#FFFF00]',
     buttonColor: 'bg-[#FFFF00] text-black',
     buttonHoverColor: 'hover:bg-[#FFFF00]/80',
-    contentStyle: 'border-r-4 border-[#FFFF00] pr-6 bg-black/40 p-6 rounded-l-lg text-right',
+    contentStyle: 'border-r-4 border-[#FFFF00] pr-3 sm:pr-6 bg-black/40 p-3 sm:p-6 rounded-l-lg text-right',
    
   }
 ];
@@ -106,7 +106,7 @@ export default function HeroSection() {
   };
   
   return (
-    <div id="hero" className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden">
+    <div id="hero" className="relative w-full h-[350px] sm:h-[450px] md:h-[500px] overflow-hidden">
       {/* Slides */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (
@@ -134,17 +134,17 @@ export default function HeroSection() {
                   <>{slide.title}{slide.subtitle && <p className={`mt-4 ${slide.subtitleColor || 'text-white'}`}>{slide.subtitle}</p>}</>
                 ) : (
                   <>
-                    <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${slide.titleColor || 'text-white'}`}>{slide.title}</h1>
-                    <p className={`text-lg md:text-xl mb-8 ${slide.subtitleColor || 'text-white'}`}>{slide.subtitle}</p>
+                    <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 ${slide.titleColor || 'text-white'}`}>{slide.title}</h1>
+                    <p className={`text-base sm:text-lg md:text-xl mb-4 sm:mb-8 ${slide.subtitleColor || 'text-white'}`}>{slide.subtitle}</p>
                   </>
                 )}
               
                 {slide.buttonText && slide.buttonLink && slide.id === 2 ? (
-                  <div className="mt-4 md:mt-6 ml-8 sm:ml-16 md:ml-32 lg:ml-48">
+                  <div className="mt-2 sm:mt-4 md:mt-6 ml-3 sm:ml-16 md:ml-32 lg:ml-48">
                     <Link 
                       href='#'
                       onClick={(e) => e.preventDefault()}
-                      className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-4 sm:px-6 md:px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
+                      className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium text-sm sm:text-base px-3 sm:px-6 md:px-8 py-1.5 sm:py-2 rounded-full transition duration-300 inline-block text-center`}
                     >
                       Sign Up here
                     </Link>
@@ -153,7 +153,7 @@ export default function HeroSection() {
                   <Link 
                     href='#'
                     onClick={(e) => e.preventDefault()}
-                    className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-md transition duration-300`}
+                    className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium text-sm sm:text-base px-3 sm:px-5 md:px-6 py-1.5 sm:py-2.5 md:py-3 rounded-md transition duration-300`}
                   >
                     {slide.buttonText}
                   </Link>
@@ -165,7 +165,7 @@ export default function HeroSection() {
       </div>
       
       {/* Navigation Controls - Styled as in the reference image */}
-      <div className="absolute z-30 bottom-4 md:bottom-8 left-0 right-0 flex justify-center space-x-3">
+      <div className="absolute z-30 bottom-2 sm:bottom-4 md:bottom-8 left-0 right-0 flex justify-center space-x-2 sm:space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
