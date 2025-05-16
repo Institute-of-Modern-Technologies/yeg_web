@@ -39,17 +39,17 @@ const slides: SlideProps[] = [
     id: 2,
     image: '/images/Hero picture 3.png',
     title: 
-      <div className="max-w-full">
-        <div className="text-white text-xl md:ml-40 ml-4 text-center md:text-left">Young Experts Group</div>
-        <div className="mt-2 md:ml-10 ml-0 text-center md:text-left">
-          <span className="text-white font-bold text-3xl md:text-5xl">Get </span>
-          <span className="text-[#FFFF00] font-bold text-3xl md:text-5xl">CAREER-READY</span>
+      <div>
+        <div className="text-white text-xl ml-40">Young Experts Group</div>
+        <div className="mt-2 ml-10">
+          <span className="text-white font-bold text-5xl">Get </span>
+          <span className="text-[#FFFF00] font-bold text-5xl">CAREER- READY</span>
         </div>
-        <div className="mt-2 md:mt-3 md:ml-16 ml-0 text-center md:text-left">
-          <span className="text-[#FFFF00] font-bold text-xl md:text-3xl">Before</span>
-          <span className="text-white font-bold text-xl md:text-3xl">&nbsp;COMPLETING SCHOOL</span>
+        <div className="mt-3 ml-16">
+          <span className="text-[#FFFF00] font-bold text-3xl">Before</span>
+          <span className="text-white font-bold text-3xl">&nbsp;COMPLETING SCHOOL</span>
         </div>
-        <div className="text-white text-base md:text-lg mt-2 md:mt-3 md:ml-5 ml-0 text-center md:text-left max-w-xs md:max-w-lg mx-auto md:mx-0">
+        <div className="text-white text-lg mt-3 ml-5">
           Empowering Young Minds Through Tech and Entrepreneurship
         </div>
       </div>,
@@ -61,7 +61,7 @@ const slides: SlideProps[] = [
     subtitleColor: '',
     buttonColor: 'bg-[#FF00FF] text-white',
     buttonHoverColor: 'hover:bg-[#FF00FF]/90',
-    contentStyle: 'py-4 md:py-6 ml-0 md:ml-4 px-4 md:px-0 w-full md:w-auto'
+    contentStyle: 'py-6 ml-4'
   },
   {
     id: 3,
@@ -126,7 +126,7 @@ export default function HeroSection() {
             </div>
             
             {/* Content */}
-            <div className={`absolute inset-0 z-20 flex flex-col ${slide.id === 1 ? 'justify-end pb-6 md:pb-12' : 'justify-center'} items-${slide.layout === 'center' ? 'center' : slide.layout === 'right' ? 'end md:end' : 'center md:start'} ${slide.layout === 'left' ? 'px-4 md:pl-12 lg:pl-16' : 'px-4 md:px-16 lg:px-24'}`}>
+            <div className={`absolute inset-0 z-20 flex flex-col ${slide.id === 1 ? 'justify-end pb-12' : 'justify-center'} items-${slide.layout === 'center' ? 'center' : slide.layout === 'right' ? 'end' : 'start'} ${slide.layout === 'left' ? 'pl-6 md:pl-12 lg:pl-16' : 'px-6 md:px-16 lg:px-24'}`}>
               <div className={slide.contentStyle || 'max-w-2xl'}>
                 {slide.layout === 'left' && slide.id === 2 ? (
                   <>{slide.title}{slide.subtitle && <p className={`mt-4 ${slide.subtitleColor || 'text-white'}`}>{slide.subtitle}</p>}</>
@@ -138,11 +138,11 @@ export default function HeroSection() {
                 )}
               
                 {slide.buttonText && slide.buttonLink && slide.id === 2 ? (
-                  <div className="mt-4 md:mt-6 md:ml-48 flex justify-center md:justify-start">
+                  <div className="mt-6 ml-48">
                     <Link 
                       href='#'
                       onClick={(e) => e.preventDefault()}
-                      className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-6 md:px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
+                      className={`${slide.buttonColor || 'bg-[#FF00FF]'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} text-white font-medium px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
                     >
                       Sign Up here
                     </Link>
