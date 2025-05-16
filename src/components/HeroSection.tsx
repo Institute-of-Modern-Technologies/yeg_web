@@ -34,23 +34,23 @@ const slides: SlideProps[] = [
     subtitleColor: 'text-white',
     buttonColor: 'bg-[#FF00FF]',
     buttonHoverColor: 'hover:bg-[#FF00FF]/80',
-    contentStyle: '  ml-44'
+    contentStyle: 'ml-4 sm:ml-12 md:ml-24 lg:ml-44'
   },
   {
     id: 2,
     image: '/images/Hero picture 3.png',
     title: 
       <div>
-        <div className="text-white text-xl ml-40">Young Experts Group</div>
-        <div className="mt-2 ml-10">
-          <span className="text-white font-bold text-5xl">Get </span>
-          <span className="text-[#FFFF00] font-bold text-5xl">CAREER- READY</span>
+        <div className="text-white text-xl ml-5 sm:ml-10 md:ml-20 lg:ml-40">Young Experts Group</div>
+        <div className="mt-2 ml-2 sm:ml-5 md:ml-8 lg:ml-10">
+          <span className="text-white font-bold text-3xl sm:text-4xl md:text-5xl">Get </span>
+          <span className="text-[#FFFF00] font-bold text-3xl sm:text-4xl md:text-5xl">CAREER- READY</span>
         </div>
-        <div className="mt-3 ml-16">
-          <span className="text-[#FFFF00] font-bold text-3xl">Before</span>
-          <span className="text-white font-bold text-3xl">&nbsp;COMPLETING SCHOOL</span>
+        <div className="mt-3 ml-4 sm:ml-8 md:ml-12 lg:ml-16">
+          <span className="text-[#FFFF00] font-bold text-xl sm:text-2xl md:text-3xl">Before</span>
+          <span className="text-white font-bold text-xl sm:text-2xl md:text-3xl">&nbsp;COMPLETING SCHOOL</span>
         </div>
-        <div className="text-white text-lg mt-3 ml-5">
+        <div className="text-white text-sm sm:text-md md:text-lg mt-3 ml-2 sm:ml-3 md:ml-5">
           Empowering Young Minds Through Tech and Entrepreneurship
         </div>
       </div>,
@@ -62,7 +62,7 @@ const slides: SlideProps[] = [
     subtitleColor: '',
     buttonColor: 'bg-[#FF00FF] text-white',
     buttonHoverColor: 'hover:bg-[#FF00FF]/90',
-    contentStyle: 'py-6 ml-4'
+    contentStyle: 'py-3 sm:py-4 md:py-6 ml-2 sm:ml-3 md:ml-4'
   },
   {
     id: 3,
@@ -106,7 +106,7 @@ export default function HeroSection() {
   };
   
   return (
-    <div id="hero" className="relative w-full h-[500px] md:h-[500px] overflow-hidden">
+    <div id="hero" className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden">
       {/* Slides */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (
@@ -140,11 +140,11 @@ export default function HeroSection() {
                 )}
               
                 {slide.buttonText && slide.buttonLink && slide.id === 2 ? (
-                  <div className="mt-6 ml-48">
+                  <div className="mt-4 md:mt-6 ml-8 sm:ml-16 md:ml-32 lg:ml-48">
                     <Link 
                       href='#'
                       onClick={(e) => e.preventDefault()}
-                      className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
+                      className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-4 sm:px-6 md:px-8 py-2 rounded-full transition duration-300 inline-block text-center`}
                     >
                       Sign Up here
                     </Link>
@@ -153,7 +153,7 @@ export default function HeroSection() {
                   <Link 
                     href='#'
                     onClick={(e) => e.preventDefault()}
-                    className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-6 py-3 rounded-md transition duration-300`}
+                    className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-md transition duration-300`}
                   >
                     {slide.buttonText}
                   </Link>

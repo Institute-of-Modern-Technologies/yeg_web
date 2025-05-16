@@ -46,7 +46,7 @@ export default function CourseCard({ course }: CourseCardProps) {
   
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-transparent hover:border-[#950713]/30 hover:translate-y-[-5px] h-full flex flex-col">
-      <div className="relative h-48">
+      <div className="relative h-40 sm:h-48">
         <Image 
           src={imageUrl}
           alt={course.title}
@@ -60,21 +60,21 @@ export default function CourseCard({ course }: CourseCardProps) {
         <div className={`absolute bottom-0 left-0 right-0 h-1 ${colorClass.bg}`}></div>
       </div>
       
-      <div className="p-6 flex-1 flex flex-col">
+      <div className="p-4 sm:p-6 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-bold text-[#950713] hover:text-[#FF00FF] transition-colors">{course.title}</h3>
-          <span className={`${colorClass.bg} ${colorClass.textOnBg} text-xs font-medium px-2.5 py-0.5 rounded-full`}>
+          <h3 className="text-lg sm:text-xl font-bold text-[#950713] hover:text-[#FF00FF] transition-colors">{course.title}</h3>
+          <span className={`${colorClass.bg} ${colorClass.textOnBg} text-xs font-medium px-2 sm:px-2.5 py-0.5 rounded-full ml-1`}>
             {course.level}
           </span>
         </div>
         
-        <p className="text-black/70 mb-4 line-clamp-2">{course.description}</p>
+        <p className="text-sm sm:text-base text-black/70 mb-3 sm:mb-4 line-clamp-2">{course.description}</p>
         
-        <div className="flex justify-between items-center mt-auto pt-4">
-          <span className="text-sm text-[#950713]">{course.duration}</span>
+        <div className="flex justify-between items-center mt-auto pt-3 sm:pt-4">
+          <span className="text-xs sm:text-sm text-[#950713]">{course.duration}</span>
           <Link 
             href="#"
-            className="text-[#950713] hover:underline font-medium text-sm flex items-center"
+            className="text-[#950713] hover:underline font-medium text-xs sm:text-sm flex items-center"
             onClick={(e) => e.preventDefault()}
           >
             Learn more
@@ -92,7 +92,7 @@ export function CoursesSection() {
   const courses: Course[] = [
     {
       id: 1,
-      title: 'Photography Class for Elementary Kids',
+      title: 'Project Week',
       description: 'Introduce your child to the world of photography with our fun and interactive course designed specifically for elementary students.',
       instructor: 'Jennifer Smith',
       subject: 'Art',
@@ -129,7 +129,7 @@ export function CoursesSection() {
   ];
   
   return (
-    <section className="relative py-16 px-6 bg-gradient-to-b from-white via-[#f9fafb] to-white">
+    <section className="relative py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-b from-white via-[#f9fafb] to-white">
       {/* Top morphing transition */}
       <div className="absolute top-0 left-0 right-0 -translate-y-full overflow-hidden">
         <SectionTransition
@@ -146,14 +146,14 @@ export function CoursesSection() {
       <div className="absolute bottom-10 right-10 w-48 h-48 bg-[#FF00FF]/10 rounded-full filter blur-xl -z-10"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16 relative">
-          <h2 className="text-4xl font-bold text-[#950713] mb-4 relative inline-block">
+        <div className="text-center mb-10 sm:mb-16 relative">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#950713] mb-3 sm:mb-4 relative inline-block">
             Explore Our Events
           </h2>
-          <p className="text-black/70 max-w-2xl mx-auto">Discover our wide range of events tailored to enhance your learning journey.</p>
+          <p className="text-sm sm:text-base text-black/70 max-w-2xl mx-auto">Discover our wide range of events tailored to enhance your learning journey.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {courses.map((course) => (
             <div key={course.id} className="transform transition-all duration-300 hover:scale-[1.02] course-card-hover-effect h-full">
               <CourseCard course={course} />
@@ -161,10 +161,10 @@ export function CoursesSection() {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <Link
             href="#"
-            className="group inline-flex items-center bg-[#950713] text-white font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:bg-[#FF00FF] relative overflow-hidden"
+            className="group inline-flex items-center bg-[#950713] text-white font-medium text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all duration-300 hover:bg-[#FF00FF] relative overflow-hidden"
             onClick={(e) => e.preventDefault()}
           >
             <span className="absolute w-full h-full top-0 left-0 bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FFFF00] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
