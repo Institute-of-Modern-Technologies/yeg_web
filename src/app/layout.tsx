@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ed Academy - Elementary School Education",
-  description: "A modern elementary school providing quality education for young minds",
+  title: "YEG - Young Experts Group",
+  description: "Equipping young minds with skills in Technology, Entrepreneurship, and Creativity",
 };
 
 export default function RootLayout({
