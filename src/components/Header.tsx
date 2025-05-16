@@ -34,7 +34,7 @@ export default function Header() {
     <header className="bg-white py-4 px-6 flex justify-between items-center shadow-sm sticky top-0 z-50 relative">
       <div className="flex items-center">
         <Link href="#hero" className="flex items-center" onClick={(e) => scrollToSection(e, 'hero')}>
-          <span className="text-xl font-bold"><span className='text-[#950713]'>Y</span> <span className='text-[#FFFF00]'>E</span> <span className='text-[#00FFFF]'>G</span></span>
+          <span className="text-xl font-bold"><span className='text-[#FF00FF]'>Young</span> <span className='text-[#FFFF00] bg-[#000000] px-2 rounded-md'>Experts</span> <span className='text-[#00FFFF]'>Group</span></span>
         </Link>
       </div>
       
