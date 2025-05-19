@@ -109,7 +109,7 @@ export default function WelcomeSection() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10">
           {/* Left Column */}
-          <div className="lg:col-span-4 bg-white p-4 sm:p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border-2 border-[#000000] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
+          <div className="lg:col-span-4 bg-white p-4 sm:p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border border-[#000000] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
             <h3 className="text-2xl sm:text-3xl font-bold text-[#000000] mb-3 sm:mb-4 flex items-center border-[#000000]">
               <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FF00FF] mr-2 sm:mr-3 flex items-center justify-center text-white shadow-[0_4px_10px_rgba(0,0,0,0.3)]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -278,8 +278,8 @@ export default function WelcomeSection() {
           </div>
 
           {/* Right Column */}
-          <div className="lg:col-span-4 bg-white p-4 sm:p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border-2 border-[#000000] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#000000] mb-3 sm:mb-4 border-b-2 border-[#000000]/50 pb-2">Why Partner With Us</h3>
+          <div className="lg:col-span-4 bg-white p-4 sm:p-6 rounded-xl shadow-[0_20px_30px_-15px_rgba(0,0,0,0.3)] border border-[#000000] transform transition-all duration-500 hover:shadow-[0_25px_35px_-15px_rgba(0,0,0,0.4)] hover:-translate-y-1 h-fit hover:border-[#FF00FF]/80">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#000000] mb-3 sm:mb-4 border-b border-[#000000]/50 pb-2">Why Partner With Us</h3>
 
             <div className="mb-6">
               <div className="flex items-start">

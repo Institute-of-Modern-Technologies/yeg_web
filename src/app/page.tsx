@@ -12,6 +12,7 @@ import AcademicAreasSection from "../components/AcademicArea";
 import PartnersSection from "../components/PartnersSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import AdmissionsSection from "../components/AdmissionsSection";
+import PricingSection from "../components/PricingSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
         <AcademicAreasSection />
         <PartnersSection />
         <TestimonialsSection />
+        <PricingSection />
         {/* <AdmissionsSection /> */}
       </main>
       <Footer />

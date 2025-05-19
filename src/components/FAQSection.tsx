@@ -189,7 +189,7 @@ export default function FAQSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left column - Categories */}
           <div className="col-span-1">
-            <h3 className="text-xl font-semibold mb-6 text-[#FF00FF]">Categories</h3>
+            <h3 className="text-xl font-semibold mb-6 text-[#000000]">Categories</h3>
             <div className="space-y-3">
               {faqCategories.map((category, index) => (
                 <a 
@@ -202,7 +202,7 @@ export default function FAQSection() {
                     flex items-center justify-between group
                   "
                 >
-                  <span className="font-medium text-[#FF00FF] group-hover:text-[#950713]">{category.name}</span>
+                  <span className="font-medium text-black group-hover:text-[#950713]">{category.name}</span>
                   <div className="bg-[#00FFFF]/20 p-1.5 rounded-full transition-all duration-300 group-hover:bg-[#00FFFF]/30">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#FF00FF] group-hover:text-[#00FFFF] transition-all duration-300 transform group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -218,7 +218,7 @@ export default function FAQSection() {
           {/* Right columns - FAQ Accordion */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-xl font-semibold mb-6 relative inline-block">
-              <span className="text-[#FF00FF] relative z-10">FAQ'S</span>
+              <span className="text-black relative z-10">FAQ'S</span>
               {/* <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-[#FF00FF] to-transparent rounded-full"></div> */}
             </h3>
             
@@ -235,7 +235,7 @@ export default function FAQSection() {
                     aria-controls={`faq-answer-${index}`}
                     aria-expanded={activeIndex === index}
                   >
-                    <span className="font-medium text-[#FF00FF] group-hover:text-[#950713] transition-colors duration-200">
+                    <span className="font-medium text-black group-hover:text-[#950713] transition-colors duration-200">
                       {faq.question}
                     </span>
                     <div className="ml-4 flex-shrink-0 bg-[#00FFFF]/10 p-1 rounded-full transform transition-all duration-300 group-hover:bg-[#00FFFF]/20 group-hover:rotate-180">
