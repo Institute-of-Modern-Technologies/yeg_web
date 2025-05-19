@@ -25,14 +25,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1: About */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-[#FFFF00]">Young Expert Group</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#FFFF00]">Young Experts Group</h4>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-white hover:text-[#00FFFF] transition-colors duration-300">Home</Link></li>
-              <li><Link href="#about" className="text-white hover:text-[#00FFFF] transition-colors duration-300">About Us</Link></li>
-              <li><Link href="#academics" className="text-white hover:text-[#00FFFF] transition-colors duration-300">Programs</Link></li>
-              <li><Link href="#events" className="text-white hover:text-[#00FFFF] transition-colors duration-300">Events</Link></li>
-              <li><Link href="#faq" className="text-white hover:text-[#00FFFF] transition-colors duration-300">FAQs</Link></li>
-              <li><Link href="#pricing" className="text-white hover:text-[#00FFFF] transition-colors duration-300">Pricing</Link></li>
+              <li><Link href="#hero" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });}}>Home</Link></li>
+              <li><Link href="#welcome" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('welcome')?.scrollIntoView({ behavior: 'smooth' });}}>About Us</Link></li>
+              <li><Link href="#academics" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('academics')?.scrollIntoView({ behavior: 'smooth' });}}>Programs</Link></li>
+              <li><Link href="#faq" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });}}>FAQs</Link></li>
+              <li><Link href="#pricing" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });}}>Pricing</Link></li>
             </ul>
           </div>
 
@@ -44,13 +43,13 @@ export default function Footer() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#FF00FF] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="#" onClick={(e) => e.preventDefault()} className="text-white hover:text-[#00FFFF] transition-colors duration-300">yeg@imtghana.com</a>
+                <a href="mailto:yeg@imtghana.com" className="text-white hover:text-[#00FFFF] transition-colors duration-300">yeg@imtghana.com</a>
               </li>
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#FF00FF] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="#" onClick={(e) => e.preventDefault()} className="text-white hover:text-[#00FFFF] transition-colors duration-300">+233 0547147313</a>
+                <a href="tel:+2330547147313" className="text-white hover:text-[#00FFFF] transition-colors duration-300">+233 0547147313</a>
               </li>
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#FF00FF] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,11 +71,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4 text-[#FFFF00]">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="#" onClick={(e) => e.preventDefault()} className="text-white hover:text-[#00FFFF] transition-colors duration-300">Admission</Link></li>
-              <li><Link href="#" onClick={(e) => e.preventDefault()} className="text-white hover:text-[#00FFFF] transition-colors duration-300">Courses</Link></li>
-              <li><Link href="#" onClick={(e) => e.preventDefault()} className="text-white hover:text-[#00FFFF] transition-colors duration-300">Gallery</Link></li>
-              <li><Link href="#" onClick={(e) => e.preventDefault()} className="text-white hover:text-[#00FFFF] transition-colors duration-300">Testimonials</Link></li>
-              <li><Link href="#" onClick={(e) => e.preventDefault()} className="text-white hover:text-[#00FFFF] transition-colors duration-300">Contact Us</Link></li>
+              <li><Link href="#features" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });}}>Stages</Link></li>
+              <li><Link href="#registration" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });}}>Registration</Link></li>
+              <li><Link href="#contact" className="text-white hover:text-[#00FFFF] transition-colors duration-300" onClick={(e) => {e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });}}>Contact Us</Link></li>
             </ul>
           </div>
 
