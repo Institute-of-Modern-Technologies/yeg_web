@@ -228,10 +228,13 @@ export default function EventsSection() {
             </div>
           </div>
           
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-6">
             <Link 
-              href="#" 
-              onClick={(e) => e.preventDefault()}
+              href="#registration" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-gradient-to-r from-[#FF00FF] to-[#950713] text-white font-medium px-6 py-2 rounded-lg flex items-center justify-center"
             >
               <span>Get Details</span>
@@ -282,8 +285,11 @@ export default function EventsSection() {
               
               <div className="mt-4 flex justify-center">
                 <Link 
-                  href="#" 
-                  onClick={(e) => e.preventDefault()}
+                  href="#registration" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="bg-gradient-to-r from-[#FF00FF] to-[#950713] text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center"
                 >
                   <span>View All Partners</span>

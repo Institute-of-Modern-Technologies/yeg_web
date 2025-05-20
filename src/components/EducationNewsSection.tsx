@@ -342,11 +342,19 @@ export default function EducationNewsSection() {
                     <div className="text-gray-500 uppercase text-xs font-semibold tracking-wider mb-1">NUMBER OF TRAINERS</div>
                   </div>
                 </div>
-
+                
                 <div className="mt-8">
                   {!showDropdown ? (
                     <button
-                      onClick={() => setShowDropdown(true)}
+                      onClick={() => {
+                        // On mobile, we might want to scroll directly to registration
+                        const isMobile = window.innerWidth < 768;
+                        if (isMobile) {
+                          document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          setShowDropdown(true);
+                        }
+                      }}
                       className="block w-full text-center bg-[#00FFFF] hover:bg-[#FF00FF] text-black hover:text-white py-3 px-6 rounded-md transition-colors duration-300 font-medium"
                     >
                       <span className="flex items-center justify-center">
@@ -365,6 +373,8 @@ export default function EducationNewsSection() {
                         onClick={() => {
                           setRegisterType('teacher');
                           setShowDropdown(false);
+                          // Scroll to registration section
+                          document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
                         }}
                         className="block w-full text-left px-4 py-3 text-sm bg-[#FF00FF]/20 text-gray-800 hover:bg-[#FF00FF] hover:text-white transition-colors duration-200 flex items-center rounded-md shadow-md"
                       >
@@ -378,6 +388,8 @@ export default function EducationNewsSection() {
                         onClick={() => {
                           setRegisterType('student');
                           setShowDropdown(false);
+                          // Scroll to registration section
+                          document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
                         }}
                         className="block w-full text-left px-4 py-3 text-sm bg-[#00FFFF]/20 text-gray-800 hover:bg-[#00FFFF] hover:text-black transition-colors duration-200 flex items-center rounded-md shadow-md"
                       >
@@ -391,6 +403,8 @@ export default function EducationNewsSection() {
                         onClick={() => {
                           setRegisterType('school');
                           setShowDropdown(false);
+                          // Scroll to registration section
+                          document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
                         }}
                         className="block w-full text-left px-4 py-3 text-sm bg-[#FFFF00]/20 text-gray-800 hover:bg-[#FFFF00] hover:text-black transition-colors duration-200 flex items-center rounded-md shadow-md"
                       >

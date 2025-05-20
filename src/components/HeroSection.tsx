@@ -142,8 +142,11 @@ export default function HeroSection() {
                 {slide.buttonText && slide.buttonLink && slide.id === 2 ? (
                   <div className="mt-2 sm:mt-4 md:mt-6 ml-3 sm:ml-16 md:ml-32 lg:ml-48">
                     <Link 
-                      href='#'
-                      onClick={(e) => e.preventDefault()}
+                      href='#registration'
+                      onClick={(e) => {
+                        e.preventDefault(); 
+                        document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
                       className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium text-sm sm:text-base px-3 sm:px-6 md:px-8 py-1.5 sm:py-2 rounded-full transition duration-300 inline-block text-center`}
                     >
                       Sign Up here
@@ -151,8 +154,11 @@ export default function HeroSection() {
                   </div>
                 ) : slide.buttonText && slide.buttonLink && (
                   <Link 
-                    href='#'
-                    onClick={(e) => e.preventDefault()}
+                    href='#registration'
+                    onClick={(e) => {
+                      e.preventDefault(); 
+                      document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className={`${slide.buttonColor || 'bg-[#FF00FF] text-white'} ${slide.buttonHoverColor || 'hover:bg-[#FF00FF]/80'} font-medium text-sm sm:text-base px-3 sm:px-5 md:px-6 py-1.5 sm:py-2.5 md:py-3 rounded-md transition duration-300`}
                   >
                     {slide.buttonText}

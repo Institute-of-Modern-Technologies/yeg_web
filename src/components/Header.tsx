@@ -107,6 +107,7 @@ export default function Header() {
             <Link href="#welcome" className="text-[#950713] hover:text-[#FF00FF] font-medium py-3 px-4 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors" onClick={(e) => scrollToSection(e, 'welcome')}>About</Link>
             <Link href="#features" className="text-[#950713] hover:text-[#FF00FF] font-medium py-3 px-4 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors" onClick={(e) => scrollToSection(e, 'features')}>Stages</Link>
             <Link href="#academics" className="text-[#950713] hover:text-[#FF00FF] font-medium py-3 px-4 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors" onClick={(e) => scrollToSection(e, 'academics')}>Programs</Link>
+            <Link href="#registration" className="bg-[#FF00FF] text-white font-medium py-3 px-4 rounded-lg hover:bg-[#FF00FF]/80 active:bg-[#FF00FF]/90 transition-colors" onClick={(e) => scrollToSection(e, 'registration')}>Enroll</Link>
           </nav>
           
           <div className="mt-4 sm:mt-6 flex flex-col space-y-2 sm:space-y-4">
