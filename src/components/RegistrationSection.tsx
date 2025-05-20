@@ -32,32 +32,16 @@ export default function RegistrationSection() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-4 text-gray-800 relative inline-block">
-            <span className="relative z-10">Registration</span>
-            <div className="absolute -bottom-1 left-0 right-0 h-3 bg-gradient-to-r from-[#00FFFF] to-[#FF00FF] -z-10 transform skew-x-12 opacity-40"></div>
-          </h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">Registration</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Join our innovative programs by completing your registration</p>
         </div>
         
-        <div className="max-w-lg mx-auto">
-          {/* Modern Registration Button */}
-          <div className="bg-white p-10 rounded-xl shadow-[0_0_30px_rgba(0,255,255,0.15)] border border-[#FF00FF]/30 transform transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,0,255,0.2)] relative overflow-hidden">
-            
-            {/* Geometric Accents */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#00FFFF]/20 to-transparent rounded-bl-[100px] pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-[#FFFF00]/20 to-transparent rounded-tr-[50px] pointer-events-none"></div>
-            
-            <h3 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#00FFFF] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#FF00FF]">Quick Registration</span>
-            </h3>
-            
-            <p className="text-gray-600 mb-8">
-              Our online registration process is simple and fast. Click the button below to complete your registration on our secure form.
-            </p>
-            
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Empty space for spacing */}
+          <div className="h-4"></div>
+          
+          {/* Registration Button - Now outside the card */}
+          <div className="max-w-md mx-auto">
             <button
               onClick={handleRegisterClick}
               className="w-full py-4 px-8 bg-[#FF00FF] hover:bg-[#FF00FF]/90 rounded-lg font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#FF00FF]/30 focus:outline-none focus:ring-2 focus:ring-[#00FFFF] focus:ring-offset-2 relative overflow-hidden group"

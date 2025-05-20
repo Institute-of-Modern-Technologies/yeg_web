@@ -227,7 +227,7 @@ export default function EducationNewsSection() {
             <div className="flex flex-col md:flex-row gap-6 mb-10">
               <div className="md:w-1/3">
                 <Image 
-                  src="/images/The Day is Near.png"
+                  src="/images/4.png"
                   alt="Students in workshop" 
                   width={300}
                   height={200}
@@ -242,7 +242,7 @@ export default function EducationNewsSection() {
                       <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-white mr-4 font-bold">JULIAN AYIVI</span>
+                  <span className="text-white mr-4 font-bold">KAREN AHIALE</span>
                   <div className="text-orange-400 mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" viewBox="0 0 20 20" fill="#FFFF00">
                       <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
@@ -252,11 +252,11 @@ export default function EducationNewsSection() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   <Link href="#" onClick={(e) => e.preventDefault()} className="hover:text-orange-400 transition-colors">
-                 The Day is Near
+               Hijia Bintu Vs the Homework Rebel
                   </Link>
                 </h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                A gentle reminder that something special is just around the corner. Stay focused, stay hopeful, and get ready—because the moment you’ve been waiting for is almost here... 🌟
+                "Hijia Bintu vs the Homework Rebel" is a short story about a smart girl who takes on a classmate known for always avoiding homework, leading to a fun and clever classroom showdown.... 🌟
                 </p>
               </div>
             </div>

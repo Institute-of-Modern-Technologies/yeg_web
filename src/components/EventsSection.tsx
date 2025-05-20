@@ -23,22 +23,22 @@ const partnerLogos = [
 const events: EventType[] = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop',
+    image: '/images/WhatsApp Image 2025-05-19 at 15.03.53_bcbbeef7.jpg',
     partner: '/images/logo1.png'
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1559223607-a43c990c692c?q=80&w=2070&auto=format&fit=crop',
+    image: '/images/WhatsApp Image 2025-05-19 at 15.06.02_a3f6ddff.jpg',
     partner: '/images/logo2.png'
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
+    image: '/images/WhatsApp Image 2025-05-15 at 15.26.04_87080953.jpg',
     partner: '/images/logo3.png'
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop',
+    image: '/images/WhatsApp Image 2025-05-19 at 15.02.07_439ffc7f.jpg',
     partner: '/images/logo4.png'
   },
   {
