@@ -7,50 +7,34 @@ import SectionTransition from './SectionTransition';
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah Johnson',
-    title: 'Parent',
-    quote: 'The teachers here have made such a positive impact on my child&apos;s development. They are not just educators, but mentors who genuinely care about their students.',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format'
+    name: 'International School of Accra',
+    title: 'Partner School',
+    quote: 'Partnering with the Young Experts Group has been one of the most transformative decisions for our school. We\'ve seen our students grow from passive learners into confident creators—designing websites, crafting digital stories, and presenting their own innovations with pride. What impresses me most is how YEG blends tech skills with creativity, critical thinking, and real-world application...',
+    fullQuote: 'Partnering with the Young Experts Group has been one of the most transformative decisions for our school. We\'ve seen our students grow from passive learners into confident creators—designing websites, crafting digital stories, and presenting their own innovations with pride. What impresses me most is how YEG blends tech skills with creativity, critical thinking, and real-world application. Even our younger students, some as young as six, are now thinking like designers, coders, and entrepreneurs. This program doesn\'t just teach technology—it inspires purpose. I highly recommend YEG to any school that wants to prepare its learners not just for exams, but for the future.',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=300&auto=format'
   },
   {
     id: 2,
-    name: 'Michael Chen',
-    title: 'High School Student',
-    quote: 'I&apos;ve attended many schools before, but none compare to the supportive environment and challenging curriculum I&apos;ve found here. It&apos;s truly changed my outlook on education.',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format'
-  },
-  {
-    id: 3,
-    name: 'Emma Rodriguez',
-    title: 'Alumni',
-    quote: 'The foundation I received at this school prepared me exceptionally well for university. The focus on critical thinking and real-world applications gave me an advantage in my studies.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format'
-  },
-  {
-    id: 4,
-    name: 'David Williams',
-    title: 'Community Member',
-    quote: 'The school&apos;s commitment to community engagement sets it apart. They&apos;re not just educating students; they&apos;re building future citizens who care about making a difference.',
+    name: 'Mr. Carlos',
+    title: 'Proud YEG Parent',
+    quote: 'I was amazed. In just two weeks, my 6-year-old—who once wanted to be a footballer—was suddenly dreaming of becoming an architect. He designed a house complete with cars, motorbikes, and a garage! Soon after, he designed a birthday card with his cousins photo on it...',
+    fullQuote: 'I was amazed. In just two weeks, my 6-year-old—who once wanted to be a footballer—was suddenly dreaming of becoming an architect. He designed a house complete with cars, motorbikes, and a garage! Soon after, he designed a birthday card with his cousins photo on it, and then I heard they\'re building their own websites too. I couldn\'t believe it—at just six years old! If you\'re wondering whether Young Experts Group is worth it, I\'ll say this: bring your child and see for yourself. What they\'re doing here is nothing short of extraordinary.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format'
   },
   {
-    id: 5,
-    name: 'Olivia Thompson',
-    title: 'Elementary Student',
-    quote: 'I love coming to school! My teachers make learning fun, and I&apos;ve made so many friends. My favorite part is our science experiments and art classes.',
-    image: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?q=80&w=300&auto=format'
+    id: 3,
+    name: 'Priscilla',
+    title: 'Basic 7 Student, Daddy\'s Pride Academy',
+    quote: 'Before the Young Expert Group (Y.E.G) came to our school, I didn\'t know much about computers. Thanks to their program, I\'ve learned to create websites, use Canva for designs, and work with ChatGPT to help with my homework...',
+    fullQuote: 'Before the Young Expert Group (Y.E.G) came to our school, I didn\'t know much about computers. Thanks to their program, I\'ve learned to create websites, use Canva for designs, and work with ChatGPT to help with my homework. Y.E.G has truly made a difference in my life by teaching me these valuable skills. Young Expert Group – WE GET IT!',
+    image: 'https://images.unsplash.com/photo-1580894894513-535f7dfbe539?q=80&w=300&auto=format'
   },
-  {
-    id: 6,
-    name: 'Robert Garcia',
-    title: 'Teacher',
-    quote: 'Working at this school has been the highlight of my teaching career. The collaborative atmosphere among staff and the resources provided allow us to truly make a difference in our students&apos; lives.',
-    image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=300&auto=format'
-  }
+
 ];
 
 export default function TestimonialsSection() {
   const [currentPage, setCurrentPage] = useState(0);
+  const [expandedId, setExpandedId] = useState<number | null>(null);
   const testimonialsPerPage = 3;
   const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
   
@@ -58,6 +42,10 @@ export default function TestimonialsSection() {
     currentPage * testimonialsPerPage, 
     (currentPage + 1) * testimonialsPerPage
   );
+  
+  const toggleExpand = (id: number) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
   
   const handleNextPage = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages);
@@ -93,10 +81,14 @@ export default function TestimonialsSection() {
           {displayedTestimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.id}
+              id={testimonial.id}
               name={testimonial.name}
               role={testimonial.title}
               testimonial={testimonial.quote}
+              fullTestimonial={testimonial.fullQuote}
               image={testimonial.image}
+              isExpanded={expandedId === testimonial.id}
+              onReadMoreClick={toggleExpand}
             />
           ))}
         </div>

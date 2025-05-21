@@ -23,20 +23,64 @@ export default function FAQSection() {
   // FAQ data
   const faqs = [
     {
-      question: "How will I manage my business with you?",
-      answer: "The Young Experts Group (YEG) program provides comprehensive business management support. Our mentors will guide you through all aspects of business development and operations."
+      question: "What is the Young Experts Group (YEG)?",
+      answer: "The Young Experts Group is a hands-on, tech-focused learning program for children and teenagers. It equips young minds with 21st-century skills like digital literacy, design, entrepreneurship, AI, coding, and creative thinking—bridging the gap between classroom learning and real-world application."
     },
     {
-      question: "Is the content on this website available in other languages?",
-      answer: "Currently, our content is only available in English. However, we're working on translations for multiple languages to better serve our diverse community of learners."
+      question: "Who can join the YEG program?",
+      answer: "YEG is open to children and teens, typically between the ages of 8 to 18 years. We welcome students from all academic backgrounds who are curious, creative, and ready to explore technology and entrepreneurship."
     },
     {
-      question: "What does it mean to be a part of our teaching platform?",
-      answer: "Being part of our teaching platform means joining a community of innovative educators and eager learners. You'll have access to cutting-edge resources, professional development opportunities, and a supportive network."
+      question: "What will participants learn?",
+      answer: "Students can learn: Website & App Design, 3D Modeling, Digital Marketing & Content Creation, Artificial Intelligence & Prompt Engineering, Graphic & Motion Design, Blogging & Story Writing, Business Development & Entrepreneurship, and Problem Solving and Presentation Skills. Each term focuses on a specific project to build a digital portfolio."
     },
     {
-      question: "What if I have more questions?",
-      answer: "We're always here to help! You can contact our support team directly through the Contact Us section, or schedule a consultation call where we can address all your specific questions."
+      question: "How is the program structured?",
+      answer: "The YEG program follows a 10-week term-based curriculum: Week 1: Recap from Last Term, Week 2–4: Task for the Term, Week 5–6: Deep Dive Sessions, Week 7: Project Week, Week 8: Presentation Week, Week 9: Evaluation Week, Week 10: Showcase & Awards."
+    },
+    {
+      question: "What makes YEG different from regular tech classes?",
+      answer: "YEG combines tech training, entrepreneurship, creativity, and soft skills in a fun, supportive environment. We use Montessori-inspired teaching, hands-on tools, real projects, and student-led learning to develop confident, innovative young leaders."
+    },
+    {
+      question: "What do students receive at the end of the program?",
+      answer: "Each participant receives: A Certificate of Participation, a digital portfolio of their project(s), a chance to feature their work on our platform, and awards and prizes (for top performers and presentations)."
+    },
+    {
+      question: "Where is YEG held?",
+      answer: "YEG operates in partner schools and campuses through the Institute of Modern Technologies (IMT). We also offer holiday bootcamps, school-based clubs, and weekend programs."
+    },
+    {
+      question: "How do we register our child or school?",
+      answer: "You can register via our website or contact us directly. We accept: Individual student registrations, school partnerships, and group bookings for holiday or weekend programs. A registration form and payment details will be provided upon sign-up."
+    },
+    {
+      question: "Is there a cost to participate?",
+      answer: "Yes, there is a program fee per term or bootcamp. It covers training, mentorship, materials, and certification. Kindly check our website or contact us for the latest rates and payment options."
+    },
+    {
+      question: "Who teaches the classes?",
+      answer: "Our instructors are trained tech professionals and educators under the YEG Instructor Program. They are skilled in working with children and passionate about tech, innovation, and youth development."
+    },
+    {
+      question: "Can my child join if they have no prior tech skills?",
+      answer: "Absolutely! No prior experience is needed. Our curriculum is designed to be beginner-friendly while also challenging for more advanced learners."
+    },
+    {
+      question: "Is there a progression after YEG?",
+      answer: "Yes! Graduates can move on to the IMT Apprenticeship Program for ages 16+, where they specialize in areas like software development, data analysis, UI/UX design, and digital marketing—while working on real projects to build a career-ready portfolio."
+    },
+    {
+      question: "How can I follow my child's progress?",
+      answer: "Parents receive regular updates, project previews, and can attend final presentations. We also have a parent-teacher support channel and feedback system."
+    },
+    {
+      question: "Do you offer online sessions?",
+      answer: "We primarily focus on in-person, hands-on learning, but selected courses and support sessions may be offered online based on demand."
+    },
+    {
+      question: "How can I become a YEG partner or sponsor?",
+      answer: "We welcome partnerships with schools, NGOs, corporate sponsors, and donors. Kindly contact us to learn how you can support youth innovation and digital education."
     }
   ];
   

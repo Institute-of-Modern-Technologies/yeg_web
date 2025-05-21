@@ -6,4 +6,5 @@ export interface Course {
   subject: string;
   level: string;
   duration: string;
-} 
+  image?: string; // Optional image path
+}

@@ -4,10 +4,14 @@ interface TestimonialCardProps {
   name: string;
   role: string;
   testimonial: string;
+  fullTestimonial?: string;
   image: string;
+  id: number;
+  isExpanded: boolean;
+  onReadMoreClick: (id: number) => void;
 }
 
-export default function TestimonialCard({ name, role, testimonial, image }: TestimonialCardProps) {
+export default function TestimonialCard({ name, role, testimonial, fullTestimonial, image, id, isExpanded, onReadMoreClick }: TestimonialCardProps) {
   // Making sure we're using .svg files from local or unsplash URLs
   const imgSrc = image.startsWith('http') ? image : image.replace(/\.(jpg|png)$/, '.svg');
 
@@ -29,7 +33,26 @@ export default function TestimonialCard({ name, role, testimonial, image }: Test
         </div>
       </div>
       
-      <p className="text-black/80">&quot;{testimonial}&quot;</p>
+      <div className="text-black/80 relative">
+        <p>&quot;{isExpanded && fullTestimonial ? fullTestimonial : testimonial}&quot;</p>
+        
+        {fullTestimonial && fullTestimonial !== testimonial && (
+          <button 
+            onClick={() => onReadMoreClick(id)}
+            className="mt-2 text-[#FF00FF] hover:text-[#950713] font-medium text-sm inline-flex items-center group transition-all duration-300"
+          >
+            {isExpanded ? 'Show Less' : 'Read More'} 
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className={`h-4 w-4 ml-1 transition-transform duration-300 ${isExpanded ? 'rotate-180' : 'rotate-0'}`} 
+              viewBox="0 0 20 20" 
+              fill="currentColor"
+            >
+              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </button>
+        )}
+      </div>
       
       <div className="mt-4 flex">
         {[...Array(5)].map((_, i) => (
@@ -48,53 +71,4 @@ export default function TestimonialCard({ name, role, testimonial, image }: Test
   );
 }
 
-export function TestimonialsSection() {
-  const testimonials = [
-    {
-      id: 1,
-      quote: "My child has grown so much academically and socially since starting at Ed Academy. The teachers truly care about each student&apos;s success and well-being.",
-      name: "Jennifer Davis",
-      title: "Parent of a 3rd Grader",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format"
-    },
-    {
-      id: 2,
-      quote: "We couldn&apos;t be happier with our decision to enroll our daughter here. The curriculum is challenging yet engaging, and the community is so supportive.",
-      name: "Michael Roberts",
-      title: "Parent of a 1st Grader",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format"
-    },
-    {
-      id: 3,
-      quote: "I&apos;m amazed at how much my son has learned in just one semester. The teachers make learning fun and interactive, and he&apos;s excited to go to school every day.",
-      name: "Sarah Thompson",
-      title: "Parent of a 4th Grader",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format"
-    }
-  ];
-  
-  return (
-    <section className="py-16 px-6 bg-gradient-to-b from-white via-[#f9fafb] to-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#950713] mb-2 text-center">
-          Explore the Students Experience
-        </h2>
-        <p className="text-black/70 max-w-3xl mx-auto text-center mb-12">
-          See what our parents and students have to say about their experience at Young Experts Group
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard
-              key={testimonial.id}
-              name={testimonial.name}
-              role={testimonial.title}
-              testimonial={testimonial.quote}
-              image={testimonial.image}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-} 
+// This component has been moved to TestimonialsSection.tsx 

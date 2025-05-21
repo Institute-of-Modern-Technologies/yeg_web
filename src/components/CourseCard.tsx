@@ -32,8 +32,8 @@ interface CourseCardProps {
 }
 
 export default function CourseCard({ course }: CourseCardProps) {
-  // Find appropriate image based on subject or use default
-  const imageUrl = getImageUrl(course.subject);
+  // Use custom image if provided, otherwise find appropriate image based on subject
+  const imageUrl = course.image || getImageUrl(course.subject);
   
   // Assign theme colors based on course ID for visual variety
   const colorClasses = [
@@ -98,6 +98,7 @@ export function CoursesSection() {
       subject: 'Technology',
       level: 'All Levels',
       duration: '1 week',
+      image: '/images/project week.png'
     },
     {
       id: 2,
@@ -107,6 +108,7 @@ export function CoursesSection() {
       subject: 'Entrepreneurship',
       level: 'Intermediate',
       duration: '1 day',
+      image: '/images/company presentation.png'
     },
     {
       id: 3,
@@ -116,6 +118,7 @@ export function CoursesSection() {
       subject: 'Innovation',
       level: 'Advanced',
       duration: '2 days',
+      image: '/images/yeg challenge.png'
     },
     {
       id: 4,
@@ -124,7 +127,8 @@ export function CoursesSection() {
       instructor: 'David Thompson',
       subject: 'Community',
       level: 'Beginner',
-      duration: 'Ongoing'
+      duration: 'Ongoing',
+      image: '/images/latest on board.png'
     }
   ];
   
