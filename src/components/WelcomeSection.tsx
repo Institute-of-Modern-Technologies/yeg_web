@@ -322,14 +322,7 @@ export default function WelcomeSection() {
               </div>
             </div>
 
-            <div className="flex justify-end">
-              <div className="text-right">
-                <div className="italic text-[#FF00FF] text-lg sm:text-xl font-bold">
-                  YEG Team
-                </div>
-                <div className="h-1 w-16 bg-[#FF00FF] ml-auto shadow-[0_0_8px_rgba(0,0,0,0.3)]"></div>
-              </div>
-            </div>
+            {/* Signature section removed */}
           </div>
         </div>
       </div>

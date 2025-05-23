@@ -133,9 +133,6 @@ export function FeatureSection() {
 
         </div>
       </div>
-      
-      {/* Modern gradient transition to Welcome Section */}
-      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent via-[#00FFFF]/20 to-[#00FFFF]/40"></div>
     </section>
   );
 }

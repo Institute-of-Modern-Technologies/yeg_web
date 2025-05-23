@@ -31,14 +31,12 @@ export default function RegistrationSection() {
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">Registration</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Join our innovative programs by completing your registration</p>
+        <div className="text-center mb-6">
+          <h2 className="text-4xl font-bold mb-2 text-gray-800">Registration</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-4">Join our innovative programs by completing your registration</p>
         </div>
         
         <div className="max-w-3xl mx-auto text-center">
-          {/* Empty space for spacing */}
-          <div className="h-4"></div>
           
           {/* Registration Button - Now outside the card */}
           <div className="max-w-md mx-auto">
